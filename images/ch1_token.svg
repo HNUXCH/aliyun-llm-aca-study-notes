@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 360"
+     font-family="-apple-system, BlinkMacSystemFont, 'PingFang SC', 'Helvetica Neue', sans-serif"
+     role="img" aria-label="Qwen 分词体验工具界面预览">
+  <defs>
+    <filter id="shadow" x="-12%" y="-20%" width="124%" height="140%">
+      <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#0F172A" flood-opacity="0.08"/>
+    </filter>
+    <style><![CDATA[
+      .f { font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Helvetica Neue', sans-serif; }
+      .title { font-size: 18px; font-weight: 760; fill: #111827; }
+      .muted { font-size: 13px; fill: #64748B; }
+      .label { font-size: 12px; font-weight: 750; fill: #475569; }
+      .stat { font-size: 28px; font-weight: 760; fill: #111827; }
+      .text { font-size: 18px; fill: #111827; }
+      .chipText { font-size: 11px; font-weight: 700; fill: #111827; }
+      .id { font-size: 10px; fill: #64748B; }
+    ]]></style>
+  </defs>
+
+  <rect width="760" height="360" rx="24" fill="#F7F8FA"/>
+  <rect x="34" y="28" width="692" height="304" rx="24" fill="#FFFFFF" stroke="#E5EAF0" filter="url(#shadow)"/>
+
+  <text x="58" y="62" class="f title">Qwen 分词体验工具</text>
+  <text x="58" y="84" class="f muted">输入任意文本，查看真实 token 与 token ID</text>
+  <rect x="548" y="47" width="150" height="30" rx="15" fill="#FFF4EA" stroke="#FED7AA"/>
+  <text x="623" y="67" text-anchor="middle" class="f label" fill="#D65F00">真实 tokenizer</text>
+
+  <rect x="58" y="104" width="640" height="62" rx="14" fill="#FBFCFE" stroke="#CBD5E1"/>
+  <text x="76" y="143" class="f text">今天天气真不错，我们去公园散步吧。</text>
+
+  <g transform="translate(58 188)">
+    <text x="0" y="0" class="f label">TOKENS</text>
+    <text x="0" y="34" class="f stat">11</text>
+    <text x="90" y="0" class="f label">CHARACTERS</text>
+    <text x="90" y="34" class="f stat">17</text>
+  </g>
+
+  <g transform="translate(248 188)">
+    <rect x="0" y="0" width="62" height="24" rx="7" fill="#FFF4EA" stroke="#FED7AA"/>
+    <text x="31" y="16" text-anchor="middle" class="f chipText">今天</text>
+    <rect x="68" y="0" width="62" height="24" rx="7" fill="#EAF3FF" stroke="#BFDBFE"/>
+    <text x="99" y="16" text-anchor="middle" class="f chipText">天气</text>
+    <rect x="136" y="0" width="46" height="24" rx="7" fill="#F4F0FF" stroke="#DDD6FE"/>
+    <text x="159" y="16" text-anchor="middle" class="f chipText">真</text>
+    <rect x="188" y="0" width="62" height="24" rx="7" fill="#ECFDF5" stroke="#BBF7D0"/>
+    <text x="219" y="16" text-anchor="middle" class="f chipText">不错</text>
+    <rect x="256" y="0" width="42" height="24" rx="7" fill="#FEF3C7" stroke="#FDE68A"/>
+    <text x="277" y="16" text-anchor="middle" class="f chipText">，</text>
+    <rect x="304" y="0" width="62" height="24" rx="7" fill="#FCE7F3" stroke="#FBCFE8"/>
+    <text x="335" y="16" text-anchor="middle" class="f chipText">我们</text>
+
+    <rect x="0" y="32" width="46" height="24" rx="7" fill="#EAF3FF" stroke="#BFDBFE"/>
+    <text x="23" y="51" text-anchor="middle" class="f chipText">去</text>
+    <rect x="52" y="32" width="62" height="24" rx="7" fill="#FFF4EA" stroke="#FED7AA"/>
+    <text x="83" y="51" text-anchor="middle" class="f chipText">公园</text>
+    <rect x="120" y="32" width="62" height="24" rx="7" fill="#F4F0FF" stroke="#DDD6FE"/>
+    <text x="151" y="51" text-anchor="middle" class="f chipText">散步</text>
+    <rect x="188" y="32" width="46" height="24" rx="7" fill="#ECFDF5" stroke="#BBF7D0"/>
+    <text x="211" y="51" text-anchor="middle" class="f chipText">吧</text>
+    <rect x="240" y="32" width="42" height="24" rx="7" fill="#FEF3C7" stroke="#FDE68A"/>
+    <text x="261" y="51" text-anchor="middle" class="f chipText">。</text>
+  </g>
+
+  <text x="58" y="306" class="f muted">预览使用公开 Qwen tokenizer：这句话被切成 11 个 token。</text>
+</svg>

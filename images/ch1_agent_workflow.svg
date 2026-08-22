@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 460">
+  <defs>
+    <linearGradient id="blueGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0033CC"/>
+      <stop offset="1" stop-color="#6281E0"/>
+    </linearGradient>
+    <linearGradient id="panelGlow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="0.58" stop-color="#F8FAFF"/>
+      <stop offset="1" stop-color="#EEF4FF"/>
+    </linearGradient>
+    <linearGradient id="leftHeader" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#DCE6FF"/>
+      <stop offset="1" stop-color="#EEF3FF"/>
+    </linearGradient>
+    <linearGradient id="orangeGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FF8A00"/>
+      <stop offset="1" stop-color="#FF6A00"/>
+    </linearGradient>
+    <linearGradient id="sheen" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#FFFFFF" stop-opacity="0.86"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="softShadow" x="-16%" y="-18%" width="132%" height="142%">
+      <feDropShadow dx="0" dy="14" stdDeviation="16" flood-color="#0033CC" flood-opacity="0.10"/>
+    </filter>
+    <filter id="chipShadow" x="-35%" y="-55%" width="170%" height="210%">
+      <feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#0033CC" flood-opacity="0.14"/>
+    </filter>
+  </defs>
+
+  <rect width="100%" height="100%" rx="8" fill="#FFFFFF"/>
+
+  <g filter="url(#softShadow)" transform="translate(0 -24)">
+    <rect x="44" y="48" width="400" height="402" rx="16" fill="#FFFFFF" stroke="#D8E2FF" stroke-width="1.2"/>
+    <rect x="44" y="48" width="400" height="58" rx="16" fill="url(#leftHeader)"/>
+    <rect x="72" y="68" width="72" height="22" rx="11" fill="#FFFFFF" stroke="#BFD0FF" stroke-width="1"/>
+    <text x="108" y="83" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="11" font-weight="700" fill="#0033CC">手动串联</text>
+    <text x="164" y="83" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="15" font-weight="700" fill="#0033CC">传统对话</text>
+    <text x="72" y="130" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="12.5" font-weight="400" fill="#5E5E5E">你反复追问，再自己接上结果</text>
+
+    <path d="M100 178V344" fill="none" stroke="#AAB8E8" stroke-width="1.6" stroke-dasharray="6,5" stroke-linecap="round"/>
+    <circle cx="100" cy="178" r="7" fill="#AAB8E8"/>
+    <circle cx="100" cy="261" r="7" fill="#AAB8E8"/>
+    <circle cx="100" cy="344" r="7" fill="#AAB8E8"/>
+
+    <rect x="128" y="154" width="276" height="56" rx="8" fill="#F8FAFF" stroke="#D8E2FF" stroke-width="1"/>
+    <rect x="128" y="154" width="4" height="56" rx="2" fill="#AAB8E8"/>
+    <text x="148" y="179" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="14" font-weight="700" fill="#000000">追问：总结第一份纪要</text>
+    <text x="148" y="198" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="12" font-weight="400" fill="#5E5E5E">AI 回一段，你复制出来</text>
+
+    <rect x="128" y="237" width="276" height="56" rx="8" fill="#F8FAFF" stroke="#D8E2FF" stroke-width="1"/>
+    <rect x="128" y="237" width="4" height="56" rx="2" fill="#AAB8E8"/>
+    <text x="148" y="262" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="14" font-weight="700" fill="#000000">追问：再总结第二份</text>
+    <text x="148" y="281" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="12" font-weight="400" fill="#5E5E5E">AI 再回一段，你继续整理</text>
+
+    <rect x="128" y="320" width="276" height="56" rx="8" fill="#F8FAFF" stroke="#D8E2FF" stroke-width="1"/>
+    <rect x="128" y="320" width="4" height="56" rx="2" fill="url(#orangeGrad)"/>
+    <text x="148" y="345" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="14" font-weight="700" fill="#000000">追问：调整格式并拼接</text>
+    <text x="148" y="364" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="12" font-weight="400" fill="#5E5E5E">AI 调整格式，你人工收尾</text>
+
+    <rect x="72" y="404" width="344" height="30" rx="15" fill="#FFF3E8" stroke="#FFD7B3" stroke-width="1"/>
+    <text x="244" y="424" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="13" font-weight="700" fill="#B45309">由你来追问、复制、重试</text>
+  </g>
+
+  <text x="480" y="235" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="20" font-weight="900" fill="#0033CC">VS</text>
+  <path d="M466 249H494" fill="none" stroke="#0033CC" stroke-width="2" stroke-linecap="round" opacity="0.46"/>
+
+  <g filter="url(#softShadow)" transform="translate(0 -24)">
+    <rect x="516" y="48" width="400" height="402" rx="16" fill="url(#panelGlow)" stroke="#BFD0FF" stroke-width="1.2"/>
+    <rect x="516" y="48" width="400" height="58" rx="16" fill="url(#blueGrad)"/>
+    <path d="M540 65H892" fill="none" stroke="url(#sheen)" stroke-width="1.7" stroke-linecap="round"/>
+    <rect x="544" y="68" width="72" height="22" rx="11" fill="#FFFFFF" fill-opacity="0.16" stroke="#FFFFFF" stroke-opacity="0.32" stroke-width="1"/>
+    <text x="580" y="83" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="11" font-weight="700" fill="#FFFFFF">自动推进</text>
+    <text x="636" y="83" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="15" font-weight="700" fill="#FFFFFF">Agent 连续推进</text>
+    <text x="544" y="130" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="12.5" font-weight="400" fill="#5E5E5E">你给目标，Agent 自己往前推</text>
+
+    <rect x="548" y="154" width="336" height="56" rx="10" fill="#FFFFFF" stroke="#BFD0FF" stroke-width="1.1" filter="url(#chipShadow)"/>
+    <rect x="568" y="173" width="42" height="20" rx="10" fill="url(#orangeGrad)"/>
+    <text x="589" y="187" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="11" font-weight="700" fill="#FFFFFF">目标</text>
+    <text x="626" y="183" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="14" font-weight="700" fill="#0033CC">把 3 份整理成周汇报</text>
+    <text x="626" y="202" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="11.5" font-weight="400" fill="#5E5E5E">你只说清楚最终结果</text>
+
+    <path d="M716 216V244" fill="none" stroke="#0033CC" stroke-width="2" stroke-linecap="round"/>
+    <polygon points="716,252 710,242 722,242" fill="#0033CC"/>
+
+    <rect x="548" y="260" width="336" height="92" rx="12" fill="#E8EEFF" stroke="#BFD0FF" stroke-width="1"/>
+    <circle cx="612" cy="301" r="20" fill="url(#blueGrad)" filter="url(#chipShadow)"/>
+    <text x="612" y="306" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="13" font-weight="700" fill="#FFFFFF">1</text>
+    <text x="612" y="333" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="12" font-weight="700" fill="#0033CC">规划</text>
+
+    <path d="M638 301H686" fill="none" stroke="#6281E0" stroke-width="1.8" stroke-linecap="round" opacity="0.82"/>
+    <polygon points="693,301 683,296 683,306" fill="#6281E0"/>
+
+    <circle cx="716" cy="301" r="20" fill="url(#blueGrad)" filter="url(#chipShadow)"/>
+    <text x="716" y="306" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="13" font-weight="700" fill="#FFFFFF">2</text>
+    <text x="716" y="333" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="12" font-weight="700" fill="#0033CC">读取</text>
+
+    <path d="M742 301H790" fill="none" stroke="#6281E0" stroke-width="1.8" stroke-linecap="round" opacity="0.82"/>
+    <polygon points="797,301 787,296 787,306" fill="#6281E0"/>
+
+    <circle cx="820" cy="301" r="20" fill="url(#blueGrad)" filter="url(#chipShadow)"/>
+    <text x="820" y="306" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="13" font-weight="700" fill="#FFFFFF">3</text>
+    <text x="820" y="333" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="12" font-weight="700" fill="#0033CC">成稿</text>
+
+    <path d="M716 358V382" fill="none" stroke="#0033CC" stroke-width="2" stroke-linecap="round"/>
+    <polygon points="716,390 710,380 722,380" fill="#0033CC"/>
+
+    <rect x="548" y="404" width="336" height="30" rx="15" fill="url(#blueGrad)" filter="url(#chipShadow)"/>
+    <circle cx="566" cy="419" r="4" fill="#FF8A00"/>
+    <text x="716" y="424" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="13" font-weight="700" fill="#FFFFFF">你来设定目标，由 Agent 自主完成</text>
+  </g>
+</svg>

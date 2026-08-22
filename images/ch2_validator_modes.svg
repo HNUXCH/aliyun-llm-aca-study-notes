@@ -1,0 +1,68 @@
+<!-- 模式：并列卡片 (Parallel Cards) — 课时3 验证器三种验证方法（逐层升级） -->
+<!-- 动画：SMIL 9s 周期循环 -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 370">
+  <defs>
+    <linearGradient id="grad5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0033CC"/>
+      <stop offset="100%" stop-color="#6281E0"/>
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="#fff" rx="8"/>
+
+  <!-- 卡片 1：二值判断（实填） — 0.4s -->
+  <g>
+    <rect x="40" y="30" width="250" height="320" rx="8" fill="#FAFBFF" stroke="#C5D4F5" stroke-width="1.5"/>
+    <path d="M40,42 Q40,30 52,30 L278,30 Q290,30 290,42 L290,84 L40,84 Z" fill="#0033CC"/>
+    <text x="165" y="63" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="20" font-weight="700" fill="#fff">二值判断</text>
+    <g transform="translate(165,126)">
+      <circle cx="-26" cy="0" r="16" fill="#0033CC"/>
+      <path d="M-33,0 L-28,6 L-19,-6" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="26" cy="0" r="16" fill="#666666"/>
+      <path d="M19,-7 L33,7 M33,-7 L19,7" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/>
+    </g>
+    <text x="165" y="194" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="17" font-weight="700" fill="#1a1a1a">每项只回 通过 / 不通过</text>
+    <line x1="72" y1="210" x2="258" y2="210" stroke="#E8EEFF" stroke-width="1"/>
+    <text x="165" y="242" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="14" fill="#333">最省事、最直接</text>
+    <text x="165" y="265" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="14" fill="#333">适合快速筛查</text>
+    <rect x="77" y="300" width="176" height="30" rx="15" fill="#E8EEFF"/>
+    <text x="165" y="320" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="14" font-weight="500" fill="#0033CC">如：6 项全过才算合格</text>
+  </g>
+
+  <!-- 卡片 2：打分表（渐变） — 0.8s -->
+  <g>
+    <rect x="335" y="30" width="250" height="320" rx="8" fill="#FAFBFF" stroke="#C5D4F5" stroke-width="1.5"/>
+    <path d="M335,42 Q335,30 347,30 L573,30 Q585,30 585,42 L585,84 L335,84 Z" fill="url(#grad5)"/>
+    <text x="460" y="63" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="20" font-weight="700" fill="#fff">打分表</text>
+    <g transform="translate(410,108)">
+      <rect x="0" y="0" width="100" height="8" rx="4" fill="#E8EEFF"/>
+      <rect x="0" y="0" width="82" height="8" rx="4" fill="#0033CC"/>
+      <rect x="0" y="16" width="100" height="8" rx="4" fill="#E8EEFF"/>
+      <rect x="0" y="16" width="60" height="8" rx="4" fill="#6281E0"/>
+      <rect x="0" y="32" width="100" height="8" rx="4" fill="#E8EEFF"/>
+      <rect x="0" y="32" width="90" height="8" rx="4" fill="#0033CC"/>
+    </g>
+    <text x="460" y="194" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="17" font-weight="700" fill="#1a1a1a">每个维度打分算总分</text>
+    <line x1="367" y1="210" x2="553" y2="210" stroke="#E8EEFF" stroke-width="1"/>
+    <text x="460" y="242" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="14" fill="#333">可排序、可分档</text>
+    <text x="460" y="265" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="14" fill="#333">适合批量比较</text>
+    <rect x="372" y="300" width="176" height="30" rx="15" fill="#E8EEFF"/>
+    <text x="460" y="320" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="14" font-weight="500" fill="#0033CC">如：总分 ≥ 80 放行</text>
+  </g>
+
+  <!-- 卡片 3：红线 + 打分（描边） — 1.2s -->
+  <g>
+    <rect x="630" y="30" width="250" height="320" rx="8" fill="#FAFBFF" stroke="#C5D4F5" stroke-width="1.5"/>
+    <path d="M630,42 Q630,30 642,30 L868,30 Q880,30 880,42 L880,84 L630,84 Z" fill="none" stroke="#0033CC" stroke-width="2"/>
+    <text x="755" y="63" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="20" font-weight="700" fill="#0033CC">红线 + 打分</text>
+    <g transform="translate(755,126)">
+      <circle cx="0" cy="0" r="17" fill="none" stroke="#FF6A00" stroke-width="2.6"/>
+      <line x1="-10" y1="10" x2="10" y2="-10" stroke="#FF6A00" stroke-width="2.6" stroke-linecap="round"/>
+    </g>
+    <text x="755" y="194" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="17" font-weight="700" fill="#1a1a1a">一般扣分、碰红线否决</text>
+    <line x1="662" y1="210" x2="848" y2="210" stroke="#E8EEFF" stroke-width="1"/>
+    <text x="755" y="242" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="14" fill="#333">总分再高也不放行</text>
+    <text x="755" y="265" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="14" fill="#333">用来守住底线</text>
+    <rect x="667" y="300" width="176" height="30" rx="15" fill="#FFF0E6"/>
+    <text x="755" y="320" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="14" font-weight="500" fill="#FF6A00">如：总分 92，但没确认口径 → 否决</text>
+  </g>
+</svg>

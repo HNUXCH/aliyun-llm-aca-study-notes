@@ -1,0 +1,83 @@
+<!-- 模式：线性流程 (Linear Flow) — 课时3 第二步·五步协作流程 -->
+<!-- 动画：SMIL 9s 周期循环 + 连续流线动画 -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 310">
+  <rect width="100%" height="100%" fill="#fff" rx="8"/>
+
+  <!-- 底部总结条 -->
+  <rect x="40" y="276" width="880" height="46" rx="8" fill="#E8EEFF"/>
+  <text x="480" y="304" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="16" font-weight="600" fill="#0033CC">先理清需求，再调研规划，然后分段执行，最后自检定稿</text>
+
+  <!-- 连接箭头（连续流动） -->
+  <g stroke="#0033CC" stroke-width="1.5" stroke-dasharray="6,3" opacity="0.45">
+    <line x1="190" y1="220" x2="216" y2="220"><animate attributeName="stroke-dashoffset" values="0;-16" dur="0.8s" repeatCount="indefinite"/></line>
+    <line x1="370" y1="220" x2="396" y2="220"><animate attributeName="stroke-dashoffset" values="0;-16" dur="0.8s" repeatCount="indefinite"/></line>
+    <line x1="550" y1="220" x2="576" y2="220"><animate attributeName="stroke-dashoffset" values="0;-16" dur="0.8s" repeatCount="indefinite"/></line>
+    <line x1="730" y1="220" x2="756" y2="220"><animate attributeName="stroke-dashoffset" values="0;-16" dur="0.8s" repeatCount="indefinite"/></line>
+  </g>
+  <g fill="#0033CC" opacity="0.5">
+    <polygon points="214,215 222,220 214,225"/>
+    <polygon points="394,215 402,220 394,225"/>
+    <polygon points="574,215 582,220 574,225"/>
+    <polygon points="754,215 762,220 754,225"/>
+  </g>
+
+  <!-- 卡片 1：采访澄清需求 — 0.4s -->
+  <g>
+    <rect x="40" y="60" width="148" height="200" rx="8" fill="#fff" stroke="#C9D6F5" stroke-width="1.2"/>
+    <circle cx="114" cy="60" r="18" fill="#0033CC"/>
+    <text x="114" y="66" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="17" font-weight="700" fill="#fff">1</text>
+    <text x="114" y="110" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="17" font-weight="700" fill="#000">采访澄清需求</text>
+    <line x1="84" y1="125" x2="144" y2="125" stroke="#0033CC" stroke-width="2" stroke-linecap="round" opacity="0.35"/>
+    <text x="114" y="155" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="14" fill="#5E5E5E">需求不清时</text>
+    <text x="114" y="176" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="14" fill="#5E5E5E">让模型反问你</text>
+    <text x="114" y="197" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="14" fill="#5E5E5E">问到信息齐</text>
+  </g>
+
+  <!-- 卡片 2：交原始资料 — 0.8s -->
+  <g>
+    <rect x="220" y="60" width="148" height="200" rx="8" fill="#fff" stroke="#C9D6F5" stroke-width="1.2"/>
+    <circle cx="294" cy="60" r="18" fill="#0033CC"/>
+    <text x="294" y="66" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="17" font-weight="700" fill="#fff">2</text>
+    <text x="294" y="110" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="17" font-weight="700" fill="#000">交原始资料</text>
+    <line x1="264" y1="125" x2="324" y2="125" stroke="#0033CC" stroke-width="2" stroke-linecap="round" opacity="0.35"/>
+    <text x="294" y="155" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="14" fill="#5E5E5E">给原料别给摘要</text>
+    <text x="294" y="176" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="14" fill="#5E5E5E">让它先审一遍</text>
+    <text x="294" y="197" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="14" fill="#5E5E5E">主动发现问题</text>
+  </g>
+
+  <!-- 卡片 3：出计划对焦 — 1.2s -->
+  <g>
+    <rect x="400" y="60" width="148" height="200" rx="8" fill="#fff" stroke="#C9D6F5" stroke-width="1.2"/>
+    <circle cx="474" cy="60" r="18" fill="#0033CC"/>
+    <text x="474" y="66" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="17" font-weight="700" fill="#fff">3</text>
+    <text x="474" y="110" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="17" font-weight="700" fill="#000">出计划对焦</text>
+    <line x1="444" y1="125" x2="504" y2="125" stroke="#0033CC" stroke-width="2" stroke-linecap="round" opacity="0.35"/>
+    <text x="474" y="155" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="14" fill="#5E5E5E">先给工作计划</text>
+    <text x="474" y="176" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="14" fill="#5E5E5E">与你对焦确认</text>
+    <text x="474" y="197" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="14" fill="#5E5E5E">再动手执行</text>
+  </g>
+
+  <!-- 卡片 4：分段执行 — 1.6s -->
+  <g>
+    <rect x="580" y="60" width="148" height="200" rx="8" fill="#fff" stroke="#C9D6F5" stroke-width="1.2"/>
+    <circle cx="654" cy="60" r="18" fill="#0033CC"/>
+    <text x="654" y="66" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="17" font-weight="700" fill="#fff">4</text>
+    <text x="654" y="110" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="17" font-weight="700" fill="#000">分段执行</text>
+    <line x1="624" y1="125" x2="684" y2="125" stroke="#0033CC" stroke-width="2" stroke-linecap="round" opacity="0.35"/>
+    <text x="654" y="155" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="14" fill="#5E5E5E">按计划一段段来</text>
+    <text x="654" y="176" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="14" fill="#5E5E5E">逐段给意见</text>
+    <text x="654" y="197" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="14" fill="#5E5E5E">确认后再继续</text>
+  </g>
+
+  <!-- 卡片 5：两轮自检 — 2.0s -->
+  <g>
+    <rect x="760" y="60" width="148" height="200" rx="8" fill="#fff" stroke="#C9D6F5" stroke-width="1.2"/>
+    <circle cx="834" cy="60" r="18" fill="#0033CC"/>
+    <text x="834" y="66" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="17" font-weight="700" fill="#fff">5</text>
+    <text x="834" y="110" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="17" font-weight="700" fill="#000">两轮自检</text>
+    <line x1="804" y1="125" x2="864" y2="125" stroke="#0033CC" stroke-width="2" stroke-linecap="round" opacity="0.35"/>
+    <text x="834" y="155" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="14" fill="#5E5E5E">逐段查错改稿</text>
+    <text x="834" y="176" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="14" fill="#5E5E5E">通读兜底跨段</text>
+    <text x="834" y="197" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="14" fill="#5E5E5E">润色定稿</text>
+  </g>
+</svg>

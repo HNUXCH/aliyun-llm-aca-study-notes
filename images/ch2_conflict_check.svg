@@ -1,0 +1,67 @@
+<!-- 模式：线性流程 (Linear Flow) — 课时3 第六节·让模型当第一读者发现资料冲突 -->
+<!-- 过程类图：方框静止，仅流向虚线流动 -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 440">
+  <defs>
+    <marker id="arrow-blue" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#0033CC" opacity="0.7"/>
+    </marker>
+    <marker id="arrow-orange" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#FF6A00" opacity="0.8"/>
+    </marker>
+  </defs>
+
+  <rect width="100%" height="100%" fill="#fff" rx="8"/>
+
+  <!-- 标题 -->
+  <text x="360" y="40" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="16" font-weight="700" fill="#1a1a1a">模型先发现口径冲突，再标「需人工确认」</text>
+
+  <!-- 文件A：电商后台 -->
+  <g>
+    <rect x="40" y="90" width="190" height="120" rx="8" fill="#FAFBFF" stroke="#C5D4F5" stroke-width="1.5"/>
+    <text x="135" y="126" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="16" font-weight="700" fill="#1a1a1a">文件 A · 电商后台</text>
+    <text x="135" y="158" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="14" fill="#5E5E5E">新品销量 1.2 万件</text>
+    <text x="135" y="186" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="13" font-weight="500" fill="#0033CC">按支付订单统计</text>
+  </g>
+
+  <!-- 文件B：财务台账 -->
+  <g>
+    <rect x="40" y="310" width="190" height="120" rx="8" fill="#FAFBFF" stroke="#C5D4F5" stroke-width="1.5"/>
+    <text x="135" y="346" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="16" font-weight="700" fill="#1a1a1a">文件 B · 财务台账</text>
+    <text x="135" y="378" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="14" fill="#5E5E5E">新品销量 0.8 万件</text>
+    <text x="135" y="406" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="13" font-weight="500" fill="#0033CC">扣除退款/取消</text>
+  </g>
+
+  <!-- 箭头：文件A → 模型（直线指向模型左中心） -->
+  <path d="M230,150 L290,260" fill="none" stroke="#0033CC" stroke-width="1.5" stroke-dasharray="6,3" opacity="0.55" marker-end="url(#arrow-blue)"/>
+  <!-- 箭头：文件B → 模型（直线指向模型左中心） -->
+  <path d="M230,370 L290,260" fill="none" stroke="#0033CC" stroke-width="1.5" stroke-dasharray="6,3" opacity="0.55" marker-end="url(#arrow-blue)"/>
+
+  <!-- 模型：第一读者 -->
+  <g>
+    <rect x="290" y="218" width="175" height="84" rx="8" fill="#0033CC"/>
+    <text x="377" y="254" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="16" font-weight="700" fill="#fff">模型 · 第一读者</text>
+    <text x="377" y="280" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="13" fill="#EAF0FF">口径不同，不能直接合并</text>
+  </g>
+
+  <!-- 箭头：模型 → 冲突 -->
+  <path d="M465,260 L505,260" fill="none" stroke="#FF6A00" stroke-width="1.5" stroke-dasharray="6,3" opacity="0.65" marker-end="url(#arrow-orange)"/>
+
+  <!-- 发现冲突 -->
+  <g>
+    <rect x="505" y="150" width="190" height="120" rx="8" fill="#FFF7F0" stroke="#FF6A00" stroke-width="1.5"/>
+    <text x="600" y="186" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="17" font-weight="700" fill="#FF6A00">发现冲突</text>
+    <text x="600" y="218" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="14" fill="#5E5E5E">A 按「支付订单」：1.2 万</text>
+    <text x="600" y="246" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="14" fill="#5E5E5E">B 按「实销」：0.8 万</text>
+  </g>
+
+  <!-- 箭头：冲突 → 人工确认 -->
+  <path d="M600,270 L600,320" fill="none" stroke="#0033CC" stroke-width="1.5" stroke-dasharray="6,3" opacity="0.55" marker-end="url(#arrow-blue)"/>
+
+  <!-- 需人工确认 -->
+  <g>
+    <rect x="505" y="320" width="190" height="80" rx="8" fill="#E8EEFF" stroke="#0033CC" stroke-width="1.5"/>
+    <text x="600" y="352" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="14" font-weight="600" fill="#0033CC">标「需人工确认」：</text>
+    <text x="600" y="374" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="14" font-weight="600" fill="#0033CC">用哪个口径？</text>
+    <text x="600" y="394" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="12" fill="#5E5E5E">只给保守结论，等你拍板</text>
+  </g>
+</svg>

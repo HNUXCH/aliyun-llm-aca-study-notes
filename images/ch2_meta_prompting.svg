@@ -1,0 +1,94 @@
+<!-- 模式：上下对比流程 — 课时3 第十节 手写调优 vs 提示词模板 -->
+<!-- 概念类图：静态，无动画 -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 460">
+  <rect width="100%" height="100%" fill="#fff" rx="8"/>
+
+  <!-- 标题 -->
+  <text x="500" y="38" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="19" font-weight="700" fill="#1a1a1a">从手写调优到提示词模板：把磨出来的流程固化下来</text>
+
+  <!-- 上半层：手写调优（第一、二步的做法） -->
+  <g>
+    <rect x="50" y="58" width="900" height="132" rx="8" fill="#F7F9FF" stroke="#C9D6F5" stroke-width="1"/>
+    <text x="70" y="84" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="15" font-weight="700" fill="#5E5E5E">手写调优（第一、二步的做法）</text>
+
+    <!-- 节点 1：你的需求 -->
+    <rect x="90" y="104" width="160" height="64" rx="6" fill="#fff" stroke="#0033CC" stroke-width="1.5"/>
+    <text x="170" y="132" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="15" font-weight="700" fill="#1a1a1a">你的需求</text>
+    <text x="170" y="154" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="12" fill="#5E5E5E">想清楚要什么</text>
+
+    <!-- 箭头 -->
+    <line x1="250" y1="136" x2="300" y2="136" stroke="#0033CC" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.5"/>
+    <polygon points="292,131 304,136 292,141" fill="#0033CC" opacity="0.6"/>
+
+    <!-- 节点 2：手写提示词 -->
+    <rect x="304" y="104" width="160" height="64" rx="6" fill="#fff" stroke="#0033CC" stroke-width="1.5"/>
+    <text x="384" y="132" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="15" font-weight="700" fill="#1a1a1a">手写提示词</text>
+    <text x="384" y="154" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="12" fill="#5E5E5E">补要素 · 几轮调优</text>
+
+    <!-- 箭头 -->
+    <line x1="464" y1="136" x2="514" y2="136" stroke="#0033CC" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.5"/>
+    <polygon points="506,131 518,136 506,141" fill="#0033CC" opacity="0.6"/>
+
+    <!-- 节点 3：完整提示词 -->
+    <rect x="518" y="104" width="160" height="64" rx="6" fill="#fff" stroke="#0033CC" stroke-width="1.5"/>
+    <text x="598" y="132" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="15" font-weight="700" fill="#1a1a1a">完整提示词</text>
+    <text x="598" y="154" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="12" fill="#5E5E5E">一轮轮磨到位</text>
+
+    <!-- 箭头 -->
+    <line x1="678" y1="136" x2="728" y2="136" stroke="#0033CC" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.5"/>
+    <polygon points="720,131 732,136 720,141" fill="#0033CC" opacity="0.6"/>
+
+    <!-- 节点 4：报告 -->
+    <rect x="732" y="104" width="160" height="64" rx="6" fill="#fff" stroke="#0033CC" stroke-width="1.5"/>
+    <text x="812" y="132" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="15" font-weight="700" fill="#1a1a1a">报告</text>
+    <text x="812" y="154" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="12" fill="#5E5E5E">质量在线</text>
+  </g>
+
+  <!-- 下半层：用提示词模板（第三步） -->
+  <g>
+    <rect x="50" y="214" width="900" height="132" rx="8" fill="#E8EEFF" stroke="#0033CC" stroke-width="1.5"/>
+    <text x="70" y="240" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="15" font-weight="700" fill="#0033CC">用提示词模板（第三步）</text>
+
+    <!-- 节点 1：你的需求 -->
+    <rect x="90" y="260" width="160" height="64" rx="6" fill="#fff" stroke="#0033CC" stroke-width="1.5"/>
+    <text x="170" y="288" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="15" font-weight="700" fill="#1a1a1a">你的需求</text>
+    <text x="170" y="310" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="12" fill="#5E5E5E">一句话提给它</text>
+
+    <!-- 箭头 -->
+    <line x1="250" y1="292" x2="300" y2="292" stroke="#0033CC" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.5"/>
+    <polygon points="292,287 304,292 292,297" fill="#0033CC" opacity="0.6"/>
+
+    <!-- 节点 2：提示词模板（高亮） -->
+    <rect x="304" y="260" width="160" height="64" rx="6" fill="#0033CC" stroke="#0033CC" stroke-width="1.5"/>
+    <text x="384" y="288" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="15" font-weight="700" fill="#fff">提示词模板</text>
+    <text x="384" y="310" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="12" fill="#EAF0FF">沉淀好的流程和方法</text>
+
+    <!-- 箭头 -->
+    <line x1="464" y1="292" x2="514" y2="292" stroke="#0033CC" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.5"/>
+    <polygon points="506,287 518,292 506,297" fill="#0033CC" opacity="0.6"/>
+
+    <!-- 节点 3：按流程执行 -->
+    <rect x="518" y="260" width="160" height="64" rx="6" fill="#fff" stroke="#0033CC" stroke-width="1.5"/>
+    <text x="598" y="288" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="15" font-weight="700" fill="#1a1a1a">按流程执行</text>
+    <text x="598" y="310" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="12" fill="#5E5E5E">体检 · 边界 · 防编造全带上</text>
+
+    <!-- 箭头 -->
+    <line x1="678" y1="292" x2="728" y2="292" stroke="#0033CC" stroke-width="1.5" stroke-dasharray="5,3" opacity="0.5"/>
+    <polygon points="720,287 732,292 720,297" fill="#0033CC" opacity="0.6"/>
+
+    <!-- 节点 4：报告 -->
+    <rect x="732" y="260" width="160" height="64" rx="6" fill="#fff" stroke="#0033CC" stroke-width="1.5"/>
+    <text x="812" y="288" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="15" font-weight="700" fill="#1a1a1a">报告</text>
+    <text x="812" y="310" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="12" fill="#5E5E5E">质量接近手写版</text>
+  </g>
+
+  <!-- 上下层之间的对应关系：磨流程的功夫固化在模板里 -->
+  <line x1="384" y1="190" x2="384" y2="260" stroke="#0033CC" stroke-width="1.2" stroke-dasharray="4,3" opacity="0.35"/>
+  <polygon points="379,252 384,264 389,252" fill="#0033CC" opacity="0.5"/>
+  <text x="408" y="230" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="12" fill="#5E5E5E">磨出来的流程和方法</text>
+  <text x="408" y="248" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="12" fill="#5E5E5E">被元提示词整理成模板</text>
+
+  <!-- 底部结论条 -->
+  <rect x="50" y="370" width="900" height="54" rx="6" fill="#0033CC" opacity="0.08"/>
+  <text x="500" y="404" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="15" font-weight="700" fill="#0033CC">两条路的产出质量接近——磨流程的功夫，都固化在提示词模板里了</text>
+</svg>

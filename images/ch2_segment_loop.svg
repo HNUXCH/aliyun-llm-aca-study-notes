@@ -1,0 +1,52 @@
+<!-- 模式：循环流程 (Cycle/Loop) — 课时3 第八节·分段执行即时循环 -->
+<!-- 过程类图：方框静止，仅流向虚线流动 -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 250">
+  <rect width="100%" height="100%" fill="#fff" rx="8"/>
+
+  <!-- 顶部回环：确认后进入下一段 -->
+  <path d="M830,90 L830,40 L140,40 L140,86" fill="none" stroke="#6281E0" stroke-width="1.5" stroke-dasharray="6,3" opacity="0.55">
+    <animate attributeName="stroke-dashoffset" values="0;-16" dur="0.8s" repeatCount="indefinite"/>
+  </path>
+  <polygon points="133,76 140,89 147,76" fill="#6281E0" opacity="0.7"/>
+  <text x="485" y="28" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="14" fill="#5E5E5E">整篇完成前，一段一段循环</text>
+
+  <!-- 框 1：模型写一段 -->
+  <g>
+    <rect x="45" y="90" width="190" height="120" rx="8" fill="#0033CC"/>
+    <text x="140" y="144" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="18" font-weight="700" fill="#fff">模型写一段</text>
+    <text x="140" y="172" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="14" fill="#EAF0FF">按计划先出这一段</text>
+  </g>
+  <path d="M235,150 L273,150" fill="none" stroke="#0033CC" stroke-width="1.5" stroke-dasharray="6,3" opacity="0.5">
+    <animate attributeName="stroke-dashoffset" values="0;-16" dur="0.8s" repeatCount="indefinite"/>
+  </path>
+  <polygon points="263,144 275,150 263,156" fill="#0033CC" opacity="0.6"/>
+
+  <!-- 框 2：你即时提意见 -->
+  <g>
+    <rect x="275" y="90" width="190" height="120" rx="8" fill="#fff" stroke="#0033CC" stroke-width="1.5"/>
+    <text x="370" y="144" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="18" font-weight="700" fill="#0033CC">你即时提意见</text>
+    <text x="370" y="172" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="14" fill="#5E5E5E">就着刚生成的内容</text>
+  </g>
+  <path d="M465,150 L503,150" fill="none" stroke="#0033CC" stroke-width="1.5" stroke-dasharray="6,3" opacity="0.5">
+    <animate attributeName="stroke-dashoffset" values="0;-16" dur="0.8s" repeatCount="indefinite"/>
+  </path>
+  <polygon points="493,144 505,150 493,156" fill="#0033CC" opacity="0.6"/>
+
+  <!-- 框 3：模型改这段 -->
+  <g>
+    <rect x="505" y="90" width="190" height="120" rx="8" fill="#6281E0"/>
+    <text x="600" y="144" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="18" font-weight="700" fill="#fff">模型改这段</text>
+    <text x="600" y="172" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="14" fill="#EAF0FF">改到你说可以</text>
+  </g>
+  <path d="M695,150 L733,150" fill="none" stroke="#0033CC" stroke-width="1.5" stroke-dasharray="6,3" opacity="0.5">
+    <animate attributeName="stroke-dashoffset" values="0;-16" dur="0.8s" repeatCount="indefinite"/>
+  </path>
+  <polygon points="723,144 735,150 723,156" fill="#0033CC" opacity="0.6"/>
+
+  <!-- 框 4：确认，进下一段 -->
+  <g>
+    <rect x="735" y="90" width="190" height="120" rx="8" fill="#E8EEFF" stroke="#0033CC" stroke-width="1.5"/>
+    <text x="830" y="144" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="18" font-weight="700" fill="#0033CC">确认，进下一段</text>
+    <text x="830" y="172" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="14" fill="#5E5E5E">跑偏就当场拉回</text>
+  </g>
+</svg>

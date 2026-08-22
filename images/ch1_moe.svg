@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420">
+  <defs>
+    <linearGradient id="blueGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0033CC"/>
+      <stop offset="100%" stop-color="#6281E0"/>
+    </linearGradient>
+    <linearGradient id="greenGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#006B4A"/>
+      <stop offset="100%" stop-color="#00A36C"/>
+    </linearGradient>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#0033CC" flood-opacity="0.10"/>
+    </filter>
+    <marker id="arrowBlue" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#0033CC"/>
+    </marker>
+    <marker id="arrowDark" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#1D2433"/>
+    </marker>
+  </defs>
+
+  <rect width="960" height="420" fill="#FFFFFF" rx="8"/>
+
+  <rect x="44" y="34" width="372" height="346" rx="16" fill="#F7F9FF" stroke="#C9D6FF" filter="url(#softShadow)"/>
+  <rect x="44" y="34" width="372" height="50" rx="16" fill="url(#blueGrad)"/>
+  <text x="230" y="66" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial" font-size="18" font-weight="700" fill="#FFFFFF">Dense Decoder Block</text>
+  <rect x="68" y="98" width="324" height="34" rx="8" fill="#FFFFFF" stroke="#C9D6FF"/>
+  <text x="230" y="120" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial" font-size="13" font-weight="700" fill="#0033CC">自注意力 Self-Attention</text>
+  <path d="M 230 132 L 230 156" stroke="#1D2433" stroke-width="1.6" marker-end="url(#arrowDark)" fill="none"/>
+  <rect x="68" y="156" width="324" height="104" rx="10" fill="#FFFFFF" stroke="#0033CC"/>
+  <rect x="68" y="156" width="324" height="34" rx="10" fill="#E8EEFF" stroke="#0033CC"/>
+  <text x="230" y="178" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial" font-size="14" font-weight="700" fill="#1D2433">MLP / FFN</text>
+  <rect x="106" y="204" width="248" height="20" rx="5" fill="#E8EEFF" stroke="#C9D6FF"/>
+  <rect x="106" y="230" width="248" height="20" rx="5" fill="#E8EEFF" stroke="#C9D6FF"/>
+  <text x="230" y="219" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial" font-size="12" fill="#5E5E5E">整套前馈网络参与计算</text>
+  <text x="230" y="245" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial" font-size="12" fill="#5E5E5E">每个 token 都走同一套模块</text>
+  <path d="M 230 260 L 230 286" stroke="#1D2433" stroke-width="1.6" marker-end="url(#arrowDark)" fill="none"/>
+  <rect x="182" y="288" width="96" height="24" rx="6" fill="#FFFFFF" stroke="#0033CC"/>
+  <text x="230" y="305" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial" font-size="12" font-weight="700" fill="#0033CC">输出结果</text>
+  <rect x="120" y="338" width="220" height="30" rx="15" fill="#E8EEFF"/>
+  <text x="230" y="358" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial" font-size="13" font-weight="700" fill="#0033CC">全部模块参与计算</text>
+
+  <text x="480" y="184" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial" font-size="18" font-weight="800" fill="#0033CC">VS</text>
+
+  <rect x="544" y="34" width="372" height="346" rx="16" fill="#F7F9FF" stroke="#BFE8DA" filter="url(#softShadow)"/>
+  <rect x="544" y="34" width="372" height="50" rx="16" fill="url(#greenGrad)"/>
+  <text x="730" y="66" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial" font-size="18" font-weight="700" fill="#FFFFFF">MoE Decoder Block</text>
+  <rect x="568" y="98" width="324" height="34" rx="8" fill="#FFFFFF" stroke="#BFE8DA"/>
+  <text x="730" y="120" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial" font-size="13" font-weight="700" fill="#006B4A">自注意力 Self-Attention</text>
+  <path d="M 730 132 L 730 150" stroke="#1D2433" stroke-width="1.6" marker-end="url(#arrowDark)" fill="none"/>
+  <rect x="568" y="150" width="324" height="170" rx="10" fill="#FFFFFF" stroke="#0033CC"/>
+  <rect x="568" y="150" width="324" height="32" rx="10" fill="#E8EEFF" stroke="#0033CC"/>
+  <text x="730" y="171" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial" font-size="14" font-weight="700" fill="#1D2433">MoE 替换 MLP / FFN</text>
+  <rect x="660" y="190" width="140" height="26" rx="13" fill="url(#blueGrad)"/>
+  <text x="730" y="208" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial" font-size="12" font-weight="700" fill="#FFFFFF">Gate Router</text>
+
+  <g transform="translate(602 232)">
+    <rect x="0" y="0" width="54" height="34" rx="8" fill="#0033CC"/>
+    <rect x="58" y="0" width="54" height="34" rx="8" fill="#FFFFFF" stroke="#FF6A00"/>
+    <rect x="116" y="0" width="54" height="34" rx="8" fill="#E8EEFF" stroke="#C9D6FF"/>
+    <rect x="174" y="0" width="54" height="34" rx="8" fill="#FFFFFF" stroke="#FF6A00"/>
+    <rect x="232" y="0" width="54" height="34" rx="8" fill="#E8EEFF" stroke="#C9D6FF"/>
+    <text x="27" y="14" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial" font-size="10" font-weight="700" fill="#FFFFFF">共享</text>
+    <text x="27" y="27" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial" font-size="10" font-weight="700" fill="#FFFFFF">专家</text>
+    <text x="85" y="14" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial" font-size="10" font-weight="700" fill="#FF6A00">选择</text>
+    <text x="85" y="27" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial" font-size="10" font-weight="700" fill="#FF6A00">专家</text>
+    <text x="143" y="22" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial" font-size="11" fill="#8A8F99">专家</text>
+    <text x="201" y="14" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial" font-size="10" font-weight="700" fill="#FF6A00">选择</text>
+    <text x="201" y="27" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial" font-size="10" font-weight="700" fill="#FF6A00">专家</text>
+    <text x="259" y="22" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial" font-size="11" fill="#8A8F99">专家</text>
+  </g>
+
+  <path d="M 704 216 C 670 222 630 226 629 232" stroke="#0033CC" stroke-width="1.5" marker-end="url(#arrowBlue)" fill="none"/>
+  <path d="M 716 216 C 694 222 688 226 687 232" stroke="#0033CC" stroke-width="1.4" stroke-dasharray="5,3" marker-end="url(#arrowBlue)" fill="none"/>
+  <path d="M 744 216 C 774 222 798 226 803 232" stroke="#0033CC" stroke-width="1.4" stroke-dasharray="5,3" marker-end="url(#arrowBlue)" fill="none"/>
+  <path d="M 730 266 L 730 286" stroke="#1D2433" stroke-width="1.6" marker-end="url(#arrowDark)" fill="none"/>
+  <rect x="682" y="288" width="96" height="24" rx="6" fill="#FFFFFF" stroke="#0033CC"/>
+  <text x="730" y="305" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial" font-size="12" font-weight="700" fill="#0033CC">合并结果</text>
+  <rect x="594" y="338" width="272" height="30" rx="15" fill="#E8EEFF"/>
+  <text x="730" y="358" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial" font-size="13" font-weight="700" fill="#0033CC">共享专家常驻，选择专家按需激活</text>
+</svg>

@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540">
+  <!-- 设计意图：参考科研 Agent 流程图重新绘制，避免使用原图；突出“人给候选方向，Agent 验证可行性，人做判断” -->
+  <defs>
+    <linearGradient id="blueGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0033CC"/>
+      <stop offset="100%" stop-color="#6281E0"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#0033CC" flood-opacity="0.10"/>
+    </filter>
+  </defs>
+
+  <rect width="960" height="540" rx="8" fill="#FFFFFF"/>
+  <rect x="48" y="56" width="864" height="408" rx="18" fill="#F5F7FF" stroke="#D8E1FF" stroke-width="1.5"/>
+
+  <rect x="84" y="198" width="136" height="96" rx="10" fill="#FFFFFF" stroke="#0033CC" stroke-width="2" filter="url(#shadow)"/>
+  <text x="152" y="230" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="15" font-weight="700" fill="#0033CC">研究者</text>
+  <text x="152" y="258" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="12" fill="#5E5E5E">给出候选方向</text>
+  <text x="152" y="278" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="12" fill="#5E5E5E">想知道能否走通</text>
+
+  <line x1="228" y1="246" x2="288" y2="246" stroke="#5E5E5E" stroke-width="1.5" opacity="0.55"/>
+  <polygon points="288,246 278,240 278,252" fill="#5E5E5E" opacity="0.65"/>
+
+  <rect x="304" y="104" width="352" height="284" rx="18" fill="url(#blueGrad)" filter="url(#shadow)"/>
+  <text x="480" y="140" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="16" font-weight="700" fill="#FFFFFF">科研 Agent 验证可行路径</text>
+
+  <rect x="340" y="176" width="112" height="54" rx="8" fill="#FFFFFF" opacity="0.18"/>
+  <text x="396" y="199" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="12" font-weight="700" fill="#FFFFFF">查文献</text>
+  <text x="396" y="216" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="10.5" fill="#FFFFFF">找已有证据</text>
+
+  <rect x="508" y="176" width="112" height="54" rx="8" fill="#FFFFFF" opacity="0.18"/>
+  <text x="564" y="199" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="12" font-weight="700" fill="#FFFFFF">提假设</text>
+  <text x="564" y="216" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="10.5" fill="#FFFFFF">形成候选方向</text>
+
+  <rect x="508" y="280" width="112" height="54" rx="8" fill="#FFFFFF" opacity="0.18"/>
+  <text x="564" y="303" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="12" font-weight="700" fill="#FFFFFF">调工具验证</text>
+  <text x="564" y="320" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="10.5" fill="#FFFFFF">代码 / 数据 / 实验</text>
+
+  <rect x="340" y="280" width="112" height="54" rx="8" fill="#FFFFFF" opacity="0.18"/>
+  <text x="396" y="303" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="12" font-weight="700" fill="#FFFFFF">分析结果</text>
+  <text x="396" y="320" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="10.5" fill="#FFFFFF">判断是否成立</text>
+
+  <path d="M452 203H508" stroke="#FFFFFF" stroke-width="1.5" opacity="0.70"/>
+  <polygon points="508,203 498,197 498,209" fill="#FFFFFF" opacity="0.80"/>
+  <path d="M564 230V280" stroke="#FFFFFF" stroke-width="1.5" opacity="0.70"/>
+  <polygon points="564,280 558,270 570,270" fill="#FFFFFF" opacity="0.80"/>
+  <path d="M508 307H452" stroke="#FFFFFF" stroke-width="1.5" opacity="0.70"/>
+  <polygon points="452,307 462,301 462,313" fill="#FFFFFF" opacity="0.80"/>
+  <path d="M396 280V230" stroke="#FFFFFF" stroke-width="1.5" opacity="0.70"/>
+  <polygon points="396,230 390,240 402,240" fill="#FFFFFF" opacity="0.80"/>
+
+  <rect x="364" y="350" width="232" height="28" rx="6" fill="#FFFFFF" opacity="0.20"/>
+  <text x="480" y="369" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="11.5" font-weight="700" fill="#FFFFFF">输出：验证结果 + 过程记录</text>
+
+  <line x1="664" y1="246" x2="724" y2="246" stroke="#5E5E5E" stroke-width="1.5" opacity="0.55"/>
+  <polygon points="724,246 714,240 714,252" fill="#5E5E5E" opacity="0.65"/>
+
+  <rect x="740" y="198" width="136" height="96" rx="10" fill="#FFFFFF" stroke="#FF6A00" stroke-width="2" filter="url(#shadow)"/>
+  <text x="808" y="230" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="15" font-weight="700" fill="#FF6A00">人做决策</text>
+  <text x="808" y="258" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="12" fill="#5E5E5E">是否可信？</text>
+  <text x="808" y="278" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="12" fill="#5E5E5E">是否继续投入？</text>
+
+  <rect x="180" y="416" width="600" height="36" rx="8" fill="#FFFFFF" stroke="#0033CC" stroke-width="1.5"/>
+  <text x="480" y="439" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="13" font-weight="700" fill="#000000">科研 Agent 的价值：把候选方向先验证一轮，帮助人决定是否继续投入</text>
+</svg>

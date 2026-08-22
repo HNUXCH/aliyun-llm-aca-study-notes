@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" preserveAspectRatio="xMidYMid meet" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'PingFang SC', 'Helvetica Neue', Arial, sans-serif">
+  <defs>
+    <linearGradient id="blueGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0033CC"/>
+      <stop offset="1" stop-color="#6281E0"/>
+    </linearGradient>
+    <linearGradient id="hotGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0033CC"/>
+      <stop offset="1" stop-color="#6281E0"/>
+    </linearGradient>
+    <linearGradient id="legendGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#E8EEFF"/>
+      <stop offset="0.45" stop-color="#9DB2F4"/>
+      <stop offset="1" stop-color="#0033CC"/>
+    </linearGradient>
+    <linearGradient id="topLineGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0033CC" stop-opacity="0.0"/>
+      <stop offset="0.18" stop-color="#0033CC" stop-opacity="0.75"/>
+      <stop offset="0.82" stop-color="#6281E0" stop-opacity="0.75"/>
+      <stop offset="1" stop-color="#6281E0" stop-opacity="0.0"/>
+    </linearGradient>
+    <linearGradient id="bestTokenGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0033CC"/>
+      <stop offset="1" stop-color="#6281E0"/>
+    </linearGradient>
+    <linearGradient id="panelGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#F6F8FF"/>
+    </linearGradient>
+    <filter id="panelShadow" x="-12%" y="-18%" width="124%" height="146%">
+      <feDropShadow dx="0" dy="18" stdDeviation="20" flood-color="#0033CC" flood-opacity="0.08"/>
+    </filter>
+    <filter id="hotGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="1" stdDeviation="1.8" flood-color="#0033CC" flood-opacity="0.14"/>
+    </filter>
+    <filter id="softShadow" x="-50%" y="-60%" width="200%" height="220%">
+      <feDropShadow dx="0" dy="8" stdDeviation="9" flood-color="#0033CC" flood-opacity="0.16"/>
+    </filter>
+  </defs>
+
+  <style><![CDATA[
+    .token { cursor: pointer; }
+    .token rect { fill: #FFFFFF; stroke: #D8E2FF; stroke-width: 1.1; }
+    .token text { fill: #1C1F26; font-size: 13px; font-weight: 700; pointer-events: none; }
+    .token:hover rect { fill: #F6F9FF; stroke: #6281E0; }
+    .token.active rect { fill: url(#blueGrad); stroke: #0033CC; filter: url(#softShadow); }
+    .token.active text { fill: #FFFFFF; }
+    .token.future { opacity: 0.24; }
+    .rowLabel { fill: #738098; font-size: 10.5px; font-weight: 760; letter-spacing: 0.3px; }
+    .tiny { fill: #8A94A6; font-size: 9.5px; font-weight: 740; letter-spacing: 0.8px; }
+    .mono { font-family: "SF Mono", Menlo, Consolas, monospace; }
+    .nodeTap { cursor: pointer; }
+    .nodeTap .hit { fill: #FFFFFF; opacity: 0; }
+    .nodeBase { fill: #F7FAFF; stroke: #BFD0FF; stroke-width: 1.1; }
+    .nodeMuted { fill: #F9FBFF; stroke: #D9E4FF; stroke-width: 1; opacity: 0.42; }
+    .nodeTap:hover .nodeBase { stroke: #0033CC; stroke-width: 1.8; }
+    .nodeActive { fill: url(#hotGrad); stroke: #0033CC; stroke-width: 2; }
+    .nodePath { fill: #0033CC; stroke: #0033CC; }
+    .nodeHigh { fill: #6281E0; stroke: #6281E0; opacity: 0.88; }
+    .nodeMid { fill: #AEBEF4; stroke: #AEBEF4; opacity: 0.76; }
+    .nodeLow { fill: #F1F6FF; stroke: #CEDAFF; opacity: 0.68; }
+    .pctText { fill: #FFFFFF; font-size: 9px; font-weight: 800; pointer-events: none; }
+    .pctDark { fill: #315070; font-size: 9px; font-weight: 800; pointer-events: none; }
+    .candidate text { fill: #20242B; font-size: 12px; font-weight: 760; pointer-events: none; }
+    .candidate .pct { fill: #8A94A6; font-size: 10px; font-weight: 760; }
+    .candidate .track { fill: #EAF0FF; }
+    .candidate .fill { fill: url(#blueGrad); }
+    .candidate.active .fill { fill: url(#bestTokenGrad); }
+    .candidate.active text { fill: #0033CC; }
+    #output, #candidates { cursor: pointer; }
+  ]]></style>
+
+  <rect width="960" height="540" rx="8" fill="#FFFFFF"/>
+  <rect x="0" y="0" width="960" height="3" fill="url(#topLineGrad)"/>
+  <path d="M64 96H896" stroke="#EEF2FF" stroke-width="1"/>
+  <path d="M64 492H896" stroke="#EEF2FF" stroke-width="1"/>
+
+  <g id="tokens">
+    <g class="token" data-id="today" transform="translate(123 50)"><rect width="54" height="32" rx="10"/><text x="27" y="21" text-anchor="middle">今天</text></g>
+    <g class="token" data-id="weather" transform="translate(195 50)"><rect width="54" height="32" rx="10"/><text x="27" y="21" text-anchor="middle">天气</text></g>
+    <g class="token" data-id="really" transform="translate(272 50)"><rect width="44" height="32" rx="10"/><text x="22" y="21" text-anchor="middle">真</text></g>
+    <g class="token" data-id="nice" transform="translate(338 50)"><rect width="56" height="32" rx="10"/><text x="28" y="21" text-anchor="middle">不错</text></g>
+    <g class="token" data-id="comma" transform="translate(421 50)"><rect width="34" height="32" rx="10"/><text x="17" y="21" text-anchor="middle">，</text></g>
+    <g class="token" data-id="we" transform="translate(483 50)"><rect width="54" height="32" rx="10"/><text x="27" y="21" text-anchor="middle">我们</text></g>
+    <g class="token" data-id="go" transform="translate(563 50)"><rect width="38" height="32" rx="10"/><text x="19" y="21" text-anchor="middle">去</text></g>
+    <g class="token" data-id="park" transform="translate(627 50)"><rect width="54" height="32" rx="10"/><text x="27" y="21" text-anchor="middle">公园</text></g>
+    <g class="token" data-id="walk" transform="translate(699 50)"><rect width="54" height="32" rx="10"/><text x="27" y="21" text-anchor="middle">散步</text></g>
+    <g class="token" data-id="ba" transform="translate(779 50)"><rect width="38" height="32" rx="10"/><text x="19" y="21" text-anchor="middle">吧</text></g>
+    <g class="token active" data-id="period" transform="translate(851 50)"><rect width="38" height="32" rx="10"/><text x="19" y="21" text-anchor="middle">。</text></g>
+  </g>
+
+  <g filter="url(#panelShadow)">
+    <rect x="44" y="108" width="872" height="318" rx="18" fill="url(#panelGrad)" stroke="#D8E2FF" stroke-width="1.1"/>
+  </g>
+  <g>
+    <rect x="58" y="118" width="844" height="34" rx="16" fill="#FAFCFF" stroke="#E8EEFF"/>
+    <rect x="58" y="184" width="844" height="34" rx="16" fill="#F8FAFF" stroke="#E8EEFF"/>
+    <rect x="58" y="250" width="844" height="34" rx="16" fill="#FAFCFF" stroke="#E8EEFF"/>
+    <rect x="58" y="316" width="844" height="34" rx="16" fill="#F8FAFF" stroke="#E8EEFF"/>
+    <rect x="58" y="382" width="844" height="34" rx="16" fill="#FAFCFF" stroke="#E8EEFF"/>
+  </g>
+
+  <g id="rowLabels">
+    <text x="128" y="139" text-anchor="end" class="rowLabel">输入表示</text>
+    <text x="128" y="205" text-anchor="end" class="rowLabel">解码器块 1</text>
+    <text x="128" y="271" text-anchor="end" class="rowLabel">解码器块 8</text>
+    <text x="128" y="337" text-anchor="end" class="rowLabel">解码器块 18</text>
+    <text x="128" y="403" text-anchor="end" class="rowLabel">最后解码器块</text>
+  </g>
+
+  <g id="legend" transform="translate(72 472)">
+    <rect x="0" y="-7" width="118" height="7" rx="4" fill="url(#legendGrad)"/>
+    <text x="-4" y="13" text-anchor="end" class="tiny">弱</text>
+    <text x="59" y="13" text-anchor="middle" class="tiny">溯源权重</text>
+    <text x="122" y="13" class="tiny">强</text>
+  </g>
+
+  <g id="flowLayer"></g>
+  <g id="nodeLayer"></g>
+
+  <g id="output" transform="translate(548 436)">
+    <rect x="0" y="0" width="326" height="70" rx="18" fill="#FFFFFF" stroke="#D8E2FF" filter="url(#softShadow)"/>
+    <text x="22" y="20" class="tiny">下一 TOKEN 候选</text>
+  </g>
+  <g id="candidates" transform="translate(572 462)">
+    <g class="candidate active" transform="translate(0 0)"><text class="word" x="0" y="15">&lt;EOS&gt;</text><text class="pct mono" x="60" y="15" text-anchor="end">45%</text><rect class="track" x="0" y="24" width="66" height="7" rx="4"/><rect class="fill" x="0" y="24" width="50" height="7" rx="4"/></g>
+    <g class="candidate" transform="translate(76 0)"><text class="word" x="0" y="15">我们</text><text class="pct mono" x="60" y="15" text-anchor="end">18%</text><rect class="track" x="0" y="24" width="66" height="7" rx="4"/><rect class="fill" x="0" y="24" width="20" height="7" rx="4"/></g>
+    <g class="candidate" transform="translate(152 0)"><text class="word" x="0" y="15">明天</text><text class="pct mono" x="60" y="15" text-anchor="end">13%</text><rect class="track" x="0" y="24" width="66" height="7" rx="4"/><rect class="fill" x="0" y="24" width="14" height="7" rx="4"/></g>
+    <g class="candidate" transform="translate(228 0)"><text class="word" x="0" y="15">换行</text><text class="pct mono" x="60" y="15" text-anchor="end">9%</text><rect class="track" x="0" y="24" width="66" height="7" rx="4"/><rect class="fill" x="0" y="24" width="10" height="7" rx="4"/></g>
+  </g>
+
+  <script type="application/javascript"><![CDATA[
+    (function () {
+      var tokens = [
+        { id: "today", x: 150 },
+        { id: "weather", x: 222 },
+        { id: "really", x: 294 },
+        { id: "nice", x: 366 },
+        { id: "comma", x: 438 },
+        { id: "we", x: 510 },
+        { id: "go", x: 582 },
+        { id: "park", x: 654 },
+        { id: "walk", x: 726 },
+        { id: "ba", x: 798 },
+        { id: "period", x: 870 }
+      ];
+      var rowY = [135, 201, 267, 333, 399];
+      var outputX = 710, outputY = 436;
+      var flowLayer = document.getElementById("flowLayer");
+      var nodeLayer = document.getElementById("nodeLayer");
+      var tokenEls = Array.prototype.slice.call(document.querySelectorAll(".token"));
+      var candidateEls = Array.prototype.slice.call(document.querySelectorAll(".candidate"));
+
+      // sources for target representation at each decoder row. Row index 1-4 traces to previous row.
+      var trace = {
+        today: {
+          1:[["today",100]], 2:[["today",100]], 3:[["today",100]], 4:[["today",100]]
+        },
+        weather: {
+          1:[["weather",60],["today",40]], 2:[["weather",52],["today",48]], 3:[["weather",56],["today",44]], 4:[["weather",58],["today",42]]
+        },
+        really: {
+          1:[["weather",52],["really",32],["today",16]], 2:[["weather",48],["really",34],["today",18]], 3:[["weather",46],["really",36],["today",18]], 4:[["weather",50],["really",34],["today",16]]
+        },
+        nice: {
+          1:[["nice",42],["really",34],["weather",18],["today",6]], 2:[["really",40],["nice",34],["weather",20],["today",6]], 3:[["nice",38],["really",36],["weather",20],["today",6]], 4:[["nice",42],["really",34],["weather",18],["today",6]]
+        },
+        comma: {
+          1:[["nice",45],["comma",25],["really",18],["weather",9],["today",3]], 2:[["nice",42],["comma",28],["really",18],["weather",9],["today",3]], 3:[["nice",44],["comma",26],["really",18],["weather",9],["today",3]], 4:[["nice",46],["comma",24],["really",18],["weather",9],["today",3]]
+        },
+        we: {
+          1:[["we",44],["comma",22],["nice",18],["weather",10],["today",6]], 2:[["we",40],["comma",24],["nice",20],["weather",10],["today",6]], 3:[["we",42],["nice",22],["comma",20],["weather",10],["today",6]], 4:[["we",44],["nice",22],["comma",18],["weather",10],["today",6]]
+        },
+        go: {
+          1:[["go",48],["we",34],["comma",8],["nice",6],["weather",4]], 2:[["we",44],["go",38],["comma",8],["nice",6],["weather",4]], 3:[["go",42],["we",40],["comma",8],["nice",6],["weather",4]], 4:[["go",44],["we",40],["comma",7],["nice",5],["weather",4]]
+        },
+        park: {
+          1:[["go",42],["park",36],["we",16],["nice",4],["today",2]], 2:[["go",40],["park",34],["we",18],["nice",5],["today",3]], 3:[["park",42],["go",36],["we",16],["nice",4],["today",2]], 4:[["park",44],["go",34],["we",16],["nice",4],["today",2]]
+        },
+        walk: {
+          1:[["park",44],["walk",32],["go",16],["we",6],["nice",2]], 2:[["park",42],["walk",34],["go",16],["we",6],["nice",2]], 3:[["walk",40],["park",38],["go",14],["we",6],["nice",2]], 4:[["park",42],["walk",36],["go",14],["we",6],["nice",2]]
+        },
+        ba: {
+          1:[["walk",44],["ba",30],["park",14],["we",8],["nice",4]], 2:[["walk",42],["ba",30],["park",16],["we",8],["nice",4]], 3:[["walk",40],["ba",32],["park",16],["we",8],["nice",4]], 4:[["walk",42],["ba",32],["park",14],["we",8],["nice",4]]
+        },
+        period: {
+          1:[["ba",38],["walk",28],["park",16],["we",10],["nice",5],["today",3]], 2:[["ba",36],["walk",30],["park",16],["we",10],["nice",5],["today",3]], 3:[["ba",38],["walk",28],["park",18],["we",9],["nice",5],["today",2]], 4:[["ba",40],["walk",28],["park",16],["we",9],["nice",5],["today",2]]
+        }
+      };
+      var candidateSets = {
+        today:[["天气",45],["下午",18],["早上",13],["出门",8]],
+        weather:[["真",48],["很好",20],["不错",14],["有点",7]],
+        really:[["不错",50],["好",18],["舒服",13],["适合",8]],
+        nice:[["，",52],["。",17],["呀",12],["所以",8]],
+        comma:[["我们",49],["一起",19],["不如",15],["可以",9]],
+        we:[["去",51],["一起",18],["可以",13],["就",8]],
+        go:[["公园",50],["外面",19],["河边",13],["散步",8]],
+        park:[["散步",52],["玩",17],["看看",12],["坐坐",8]],
+        walk:[["吧",49],["。",18],["一会儿",13],["也好",8]],
+        ba:[["。",54],["！",16],["？",11],["呀",7]],
+        period:[["<EOS>",45],["我们",18],["明天",13],["换行",9]]
+      };
+      function ns(n){ return document.createElementNS("http://www.w3.org/2000/svg", n); }
+      function tokenById(id){ return tokens.filter(function(t){return t.id===id;})[0]; }
+      function tokenIndex(id){ for(var i=0;i<tokens.length;i+=1){ if(tokens[i].id===id) return i; } return 0; }
+      function colorFor(w, primary){ if(primary)return"#0033CC"; if(w>=24)return"#6281E0"; if(w>=12)return"#AEBEF4"; return"#D8E2FF"; }
+      function pathFor(x1,y1,x2,y2){ var d=x2-x1; return "M"+x1+" "+y1+" C "+(x1+d*.28)+" "+(y1+28)+", "+(x2-d*.18)+" "+(y2-28)+", "+x2+" "+y2; }
+      function setTokenState(targetId){ var limit=tokenIndex(targetId); tokenEls.forEach(function(el){ var id=el.getAttribute("data-id"); el.classList.toggle("active", id===targetId); el.classList.toggle("future", tokenIndex(id)>limit); }); }
+      function setCandidates(targetId){ var rows=candidateSets[targetId]||candidateSets.period; candidateEls.forEach(function(el,i){ var row=rows[i]; el.querySelector(".word").textContent=row[0]; el.querySelector(".pct").textContent=row[1]+"%"; el.querySelector(".fill").setAttribute("width", String(Math.max(7, Math.round(66*row[1]/60)))); el.classList.toggle("active", i===0); }); }
+      function drawEdge(sourceId, sourceRow, targetId, targetRow, w, depth, primary){
+        var s=tokenById(sourceId), t=tokenById(targetId);
+        var d = pathFor(s.x,rowY[sourceRow],t.x,rowY[targetRow]);
+        if(primary){
+          var under=ns("path");
+          under.setAttribute("d", d);
+          under.setAttribute("fill","none");
+          under.setAttribute("stroke","#DCE6FF");
+          under.setAttribute("stroke-width","6.2");
+          under.setAttribute("stroke-linecap","round");
+          under.setAttribute("opacity",".58");
+          flowLayer.appendChild(under);
+        }
+        var p=ns("path");
+        p.setAttribute("d", d);
+        p.setAttribute("fill","none"); p.setAttribute("stroke",colorFor(w, primary));
+        p.setAttribute("stroke-width", String(primary ? 2.75 : w>=24 ? 1.35 : w>=12 ? .9 : .45));
+        p.setAttribute("stroke-linecap","round");
+        p.setAttribute("opacity", String(primary ? Math.max(.68, .9-depth*.06) : w>=24 ? .52 : w>=12 ? .36 : .16));
+        flowLayer.appendChild(p);
+      }
+      function drawBackgroundEdge(sourceId, sourceRow, targetId, targetRow){
+        var s=tokenById(sourceId), t=tokenById(targetId);
+        var p=ns("path");
+        p.setAttribute("d", pathFor(s.x,rowY[sourceRow],t.x,rowY[targetRow]));
+        p.setAttribute("fill","none");
+        p.setAttribute("stroke","#C9D6F7");
+        p.setAttribute("stroke-width",".45");
+        p.setAttribute("stroke-linecap","round");
+        p.setAttribute("opacity",".14");
+        flowLayer.appendChild(p);
+      }
+      function drawNode(id,row,tone,w){
+        var token=tokenById(id), g=ns("g"), hit=ns("circle"), c=ns("circle");
+        g.setAttribute("class","nodeTap");
+        hit.setAttribute("class","hit"); hit.setAttribute("cx",token.x); hit.setAttribute("cy",rowY[row]); hit.setAttribute("r","13");
+        c.setAttribute("cx",token.x); c.setAttribute("cy",rowY[row]);
+        c.setAttribute("r", tone==="active" ? "8" : tone==="path" ? "6.4" : w>=24 ? "5.6" : w>=12 ? "4.8" : "4.1");
+        c.setAttribute("class", tone==="active" ? "nodeActive" : tone==="path" ? "nodePath" : tone==="high" ? "nodeHigh" : tone==="mid" ? "nodeMid" : tone==="low" ? "nodeLow" : tone==="muted" ? "nodeMuted" : "nodeBase");
+        g.appendChild(hit); g.appendChild(c);
+        g.addEventListener("click", function(){ render(id,row); });
+        nodeLayer.appendChild(g);
+      }
+      function primaryChain(id,row){
+        var chain=[];
+        var current=id;
+        for(var r=row;r>=0;r-=1){
+          chain.unshift({id:current,row:r});
+          if(r>0){
+            var sources=(trace[current]&&trace[current][r])||[[current,100]];
+            current=sources[0][0];
+          }
+        }
+        return chain;
+      }
+      function drawTraceTree(id,row){
+        var chain=primaryChain(id,row);
+        var onPath={};
+        chain.forEach(function(item){ onPath[item.id+"@"+item.row]=true; });
+
+        for(var i=1;i<chain.length;i+=1){
+          var child=chain[i], parent=chain[i-1];
+          var sources=(trace[child.id]&&trace[child.id][child.row])||[[child.id,100]];
+          sources.forEach(function(item,idx){
+            var sid=item[0], w=item[1];
+            if(idx===0) return;
+            drawEdge(sid,child.row-1,child.id,child.row,w,0,false);
+            drawNode(sid,child.row-1,w>=24?"high":w>=12?"mid":"low",w);
+          });
+          var primaryWeight=sources[0] ? sources[0][1] : 100;
+          drawEdge(parent.id,parent.row,child.id,child.row,primaryWeight,i-1,true);
+        }
+        chain.forEach(function(item,idx){
+          drawNode(item.id,item.row,idx===chain.length-1?"active":"path",40);
+        });
+      }
+      function render(targetId,row){
+        if(row===undefined) row=4;
+        flowLayer.innerHTML=""; nodeLayer.innerHTML="";
+        setTokenState(targetId); setCandidates(targetId);
+        var limit=tokenIndex(targetId);
+        for(var br=1;br<rowY.length;br+=1){
+          for(var ti=0;ti<=limit;ti+=1){
+            for(var si=0;si<=ti;si+=1){
+              drawBackgroundEdge(tokens[si].id,br-1,tokens[ti].id,br);
+            }
+          }
+        }
+        for(var r=0;r<rowY.length;r+=1){ tokens.forEach(function(token,idx){ drawNode(token.id,r,idx<=limit?"base":"muted",0); }); }
+        drawTraceTree(targetId,row);
+        if(row===4){
+          var t=tokenById(targetId), p=ns("path");
+          var d=pathFor(t.x,rowY[4],outputX,outputY);
+          var under=ns("path");
+          under.setAttribute("d", d); under.setAttribute("fill","none"); under.setAttribute("stroke","#DCE6FF"); under.setAttribute("stroke-width","7"); under.setAttribute("stroke-linecap","round"); under.setAttribute("opacity",".58");
+          flowLayer.appendChild(under);
+          p.setAttribute("d", d);
+          p.setAttribute("fill","none"); p.setAttribute("stroke","#0033CC"); p.setAttribute("stroke-width","3.2"); p.setAttribute("stroke-linecap","round"); p.setAttribute("opacity",".86");
+          flowLayer.appendChild(p);
+        }
+      }
+      tokenEls.forEach(function(el){ el.addEventListener("click", function(){ render(el.getAttribute("data-id"),4); }); });
+      document.getElementById("output").addEventListener("click", function(){ render("period",4); });
+      document.getElementById("candidates").addEventListener("click", function(){ render("period",4); });
+      render("period",4);
+    })();
+  ]]></script>
+</svg>

@@ -1,0 +1,49 @@
+<!-- 模式：循环流程 (Cycle/Loop) — 课时3 提示词模板⇄验证器闭环 -->
+<!-- 动画：SMIL 9s 周期循环 + 连续流线动画 -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 360">
+  <rect width="100%" height="100%" fill="#fff" rx="8"/>
+
+  <!-- 顶部弧线：提示词模板 → 验证器（产出） -->
+  <path d="M305,118 Q480,30 655,118" fill="none" stroke="#0033CC" stroke-width="1.5" stroke-dasharray="6,3" opacity="0.5">
+    <animate attributeName="stroke-dashoffset" values="0;-16" dur="0.8s" repeatCount="indefinite"/>
+  </path>
+  <polygon points="647,113 658,118 647,123" fill="#0033CC" opacity="0.6"/>
+  <text x="480" y="60" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="14" font-weight="600" fill="#0033CC">① 产出报告</text>
+
+  <!-- 底部弧线：验证器 → 提示词模板（反馈修改） -->
+  <path d="M655,182 Q480,260 305,182" fill="none" stroke="#5E5E5E" stroke-width="1.5" stroke-dasharray="6,3" opacity="0.5">
+    <animate attributeName="stroke-dashoffset" values="0;-16" dur="0.8s" repeatCount="indefinite"/>
+  </path>
+  <polygon points="313,177 302,182 313,187" fill="#5E5E5E" opacity="0.6"/>
+  <text x="480" y="240" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="14" font-weight="600" fill="#5E5E5E">② 反馈问题，让它修改</text>
+
+  <!-- 验证器自优化环（误判样本） -->
+  <path d="M712,98 C700,42 784,42 772,98" fill="none" stroke="#FF6A00" stroke-width="1.5" stroke-dasharray="6,3" opacity="0.55">
+    <animate attributeName="stroke-dashoffset" values="0;-16" dur="0.8s" repeatCount="indefinite"/>
+  </path>
+  <polygon points="767,88 773,100 778,87" fill="#FF6A00" opacity="0.7"/>
+  <text x="742" y="20" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="14" font-weight="600" fill="#FF6A00">③ 用误判样本调优验证器</text>
+
+  <!-- 节点：提示词模板 — 0.4s -->
+  <g>
+    <rect x="130" y="98" width="175" height="104" rx="8" fill="#0033CC"/>
+    <text x="217" y="138" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="19" font-weight="700" fill="#fff">提示词模板</text>
+    <text x="217" y="166" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="14" fill="#EAF0FF">接需求，批量产出报告</text>
+  </g>
+
+  <!-- 节点：验证器 — 0.8s -->
+  <g>
+    <rect x="655" y="98" width="175" height="104" rx="8" fill="#fff" stroke="#0033CC" stroke-width="1.5"/>
+    <text x="742" y="138" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="19" font-weight="700" fill="#0033CC">验证器</text>
+    <text x="742" y="166" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="14" fill="#5E5E5E">打分 · 红线否决</text>
+  </g>
+
+  <!-- 人把关 — 1.2s -->
+  <g>
+    <rect x="383" y="280" width="194" height="46" rx="23" fill="#E8EEFF" stroke="#0033CC" stroke-width="1.2"/>
+    <text x="480" y="308" text-anchor="middle" font-family="PingFang SC,Microsoft YaHei,sans-serif" font-size="15" font-weight="700" fill="#0033CC">④ 关键判断，由人把关</text>
+  </g>
+
+  <!-- 人把关与反馈环的虚线连接 -->
+  <line x1="480" y1="240" x2="480" y2="280" stroke="#0033CC" stroke-width="1.2" stroke-dasharray="4,3" opacity="0.4"/>
+</svg>
