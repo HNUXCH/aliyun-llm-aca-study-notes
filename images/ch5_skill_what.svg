@@ -1,0 +1,147 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540">
+  <defs>
+    <linearGradient id="blueGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0033CC"/>
+      <stop offset="1" stop-color="#6281E0"/>
+    </linearGradient>
+    <linearGradient id="panelGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#F7F9FF"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#FBFCFF"/>
+    </linearGradient>
+    <filter id="panelShadow" x="-8%" y="-8%" width="116%" height="120%">
+      <feDropShadow dx="0" dy="14" stdDeviation="16" flood-color="#0033CC" flood-opacity="0.08"/>
+    </filter>
+    <filter id="cardShadow" x="-12%" y="-12%" width="124%" height="128%">
+      <feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#0033CC" flood-opacity="0.10"/>
+    </filter>
+    <filter id="chipShadow" x="-10%" y="-20%" width="120%" height="150%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#0033CC" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <rect width="100%" height="100%" fill="#FFFFFF" rx="8"/>
+  <circle cx="134" cy="88" r="96" fill="#E8EEFF" opacity="0.35"/>
+  <circle cx="842" cy="446" r="112" fill="#E8EEFF" opacity="0.35"/>
+  <path d="M62 494 C220 468 330 468 452 500" fill="none" stroke="#E8EEFF" stroke-width="1.2" opacity="0.8"/>
+  <path d="M512 82 C642 54 760 66 900 40" fill="none" stroke="#E8EEFF" stroke-width="1.2" opacity="0.8"/>
+
+  <rect x="50" y="30" width="400" height="480" rx="18" fill="url(#panelGrad)" stroke="#DDE8FF" stroke-width="1.2" filter="url(#panelShadow)"/>
+  <path d="M50,48 Q50,30 68,30 L432,30 Q450,30 450,48 L450,78 L50,78 Z" fill="#0033CC"/>
+  <text x="250" y="61" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="16" font-weight="700" fill="#FFFFFF">没有 Skill：格式漂移</text>
+
+  <rect x="88" y="104" width="324" height="54" rx="12" fill="#FFFFFF" stroke="#E8EEFF" stroke-width="1" filter="url(#chipShadow)"/>
+  <text x="250" y="126" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="13" font-weight="700" fill="#0033CC">同一份工作记录</text>
+  <text x="250" y="146" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="12" fill="#5E5E5E">三次生成，重要事项位置不固定</text>
+
+  <path d="M154 166 C146 179 136 190 130 202" fill="none" stroke="#AAB4C5" stroke-width="1.4" stroke-dasharray="4,6" stroke-linecap="round" opacity="0.85"/>
+  <circle cx="130" cy="202" r="3.2" fill="#AAB4C5" opacity="0.85"/>
+  <path d="M250 166 C250 178 250 190 250 202" fill="none" stroke="#AAB4C5" stroke-width="1.4" stroke-dasharray="4,6" stroke-linecap="round" opacity="0.85"/>
+  <circle cx="250" cy="202" r="3.2" fill="#AAB4C5" opacity="0.85"/>
+  <path d="M346 166 C354 179 364 190 370 202" fill="none" stroke="#AAB4C5" stroke-width="1.4" stroke-dasharray="4,6" stroke-linecap="round" opacity="0.85"/>
+  <circle cx="370" cy="202" r="3.2" fill="#AAB4C5" opacity="0.85"/>
+
+  <g transform="translate(78 206)">
+    <rect x="0" y="0" width="104" height="172" rx="10" fill="url(#cardGrad)" stroke="#0033CC" stroke-width="1.1" filter="url(#cardShadow)"/>
+    <path d="M0,10 Q0,0 10,0 L94,0 Q104,0 104,10 L104,30 L0,30 Z" fill="#E8EEFF"/>
+    <text x="52" y="21" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="12" font-weight="700" fill="#0033CC">第 1 次</text>
+    <text x="16" y="56" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="13" font-weight="700" fill="#000000">本周总结</text>
+    <line x1="16" y1="80" x2="88" y2="80" stroke="#6281E0" stroke-width="1.6" stroke-linecap="round"/>
+    <line x1="16" y1="103" x2="80" y2="103" stroke="#6281E0" stroke-width="1.6" stroke-linecap="round" opacity="0.55"/>
+    <line x1="16" y1="126" x2="88" y2="126" stroke="#6281E0" stroke-width="1.6" stroke-linecap="round" opacity="0.35"/>
+    <rect x="16" y="144" width="68" height="18" rx="4" fill="#FFF0E5" stroke="#FF6A00" stroke-width="0.9"/>
+    <text x="50" y="157" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="10" font-weight="700" fill="#FF6A00">重要事项</text>
+  </g>
+
+  <g transform="translate(198 206)">
+    <rect x="0" y="0" width="104" height="172" rx="10" fill="url(#cardGrad)" stroke="#0033CC" stroke-width="1.1" filter="url(#cardShadow)"/>
+    <path d="M0,10 Q0,0 10,0 L94,0 Q104,0 104,10 L104,30 L0,30 Z" fill="#E8EEFF"/>
+    <text x="52" y="21" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="12" font-weight="700" fill="#0033CC">第 2 次</text>
+    <text x="16" y="56" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="13" font-weight="700" fill="#000000">工作进展</text>
+    <rect x="16" y="76" width="10" height="10" rx="2" fill="#FFFFFF" stroke="#0033CC" stroke-width="1"/>
+    <path d="M18 81 L21 84 L26 77" fill="none" stroke="#0033CC" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1="34" y1="82" x2="86" y2="82" stroke="#6281E0" stroke-width="1.6" stroke-linecap="round"/>
+    <rect x="16" y="102" width="68" height="18" rx="4" fill="#FFF0E5" stroke="#FF6A00" stroke-width="0.9"/>
+    <text x="50" y="115" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="10" font-weight="700" fill="#FF6A00">重要事项</text>
+    <line x1="16" y1="142" x2="88" y2="142" stroke="#6281E0" stroke-width="1.6" stroke-linecap="round" opacity="0.35"/>
+  </g>
+
+  <g transform="translate(318 206)">
+    <rect x="0" y="0" width="104" height="172" rx="10" fill="url(#cardGrad)" stroke="#0033CC" stroke-width="1.1" filter="url(#cardShadow)"/>
+    <path d="M0,10 Q0,0 10,0 L94,0 Q104,0 104,10 L104,30 L0,30 Z" fill="#E8EEFF"/>
+    <text x="52" y="21" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="12" font-weight="700" fill="#0033CC">第 3 次</text>
+    <text x="16" y="56" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="13" font-weight="700" fill="#000000">客户周报</text>
+    <rect x="16" y="70" width="68" height="18" rx="4" fill="#FFF0E5" stroke="#FF6A00" stroke-width="0.9"/>
+    <text x="50" y="83" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="10" font-weight="700" fill="#FF6A00">重要事项</text>
+    <line x1="16" y1="108" x2="88" y2="108" stroke="#6281E0" stroke-width="1"/>
+    <line x1="16" y1="136" x2="88" y2="136" stroke="#E8EEFF" stroke-width="1.1"/>
+    <line x1="40" y1="96" x2="40" y2="154" stroke="#E8EEFF" stroke-width="1.1"/>
+    <line x1="64" y1="96" x2="64" y2="154" stroke="#E8EEFF" stroke-width="1.1"/>
+    <circle cx="28" cy="122" r="3" fill="#6281E0"/>
+    <circle cx="28" cy="150" r="3" fill="#FF6A00"/>
+  </g>
+
+  <rect x="88" y="418" width="324" height="52" rx="8" fill="#E8EEFF" stroke="#0033CC" stroke-width="1"/>
+  <text x="250" y="440" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="14" font-weight="700" fill="#0033CC">三次写周报，格式不统一</text>
+  <text x="250" y="461" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="12" fill="#5E5E5E">重要事项有时在开头，有时在中间或末尾</text>
+
+  <text x="480" y="276" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="20" font-weight="900" fill="#0033CC">VS</text>
+
+  <rect x="510" y="30" width="400" height="480" rx="18" fill="url(#panelGrad)" stroke="#DDE8FF" stroke-width="1.2" filter="url(#panelShadow)"/>
+  <path d="M510,48 Q510,30 528,30 L892,30 Q910,30 910,48 L910,78 L510,78 Z" fill="url(#blueGrad)"/>
+  <text x="710" y="61" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="16" font-weight="700" fill="#FFFFFF">有 Skill：格式一致</text>
+
+  <rect x="548" y="104" width="324" height="54" rx="12" fill="#FFFFFF" stroke="#E8EEFF" stroke-width="1" filter="url(#chipShadow)"/>
+  <text x="710" y="126" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="13" font-weight="700" fill="#0033CC">同一份工作记录 + 周报 Skill</text>
+  <text x="710" y="146" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="12" fill="#5E5E5E">三次生成，重要事项固定在开头</text>
+
+  <path d="M602 166 C598 178 592 190 590 202" fill="none" stroke="#6281E0" stroke-width="1.4" stroke-dasharray="4,6" stroke-linecap="round" opacity="0.88"/>
+  <circle cx="590" cy="202" r="3.2" fill="#6281E0" opacity="0.88"/>
+  <path d="M710 166 C710 178 710 190 710 202" fill="none" stroke="#6281E0" stroke-width="1.4" stroke-dasharray="4,6" stroke-linecap="round" opacity="0.88"/>
+  <circle cx="710" cy="202" r="3.2" fill="#6281E0" opacity="0.88"/>
+  <path d="M818 166 C822 178 828 190 830 202" fill="none" stroke="#6281E0" stroke-width="1.4" stroke-dasharray="4,6" stroke-linecap="round" opacity="0.88"/>
+  <circle cx="830" cy="202" r="3.2" fill="#6281E0" opacity="0.88"/>
+
+  <g transform="translate(538 206)">
+    <rect x="0" y="0" width="104" height="172" rx="10" fill="url(#cardGrad)" stroke="#0033CC" stroke-width="1.1" filter="url(#cardShadow)"/>
+    <path d="M0,10 Q0,0 10,0 L94,0 Q104,0 104,10 L104,30 L0,30 Z" fill="#E8EEFF"/>
+    <text x="52" y="21" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="12" font-weight="700" fill="#0033CC">第 1 次</text>
+    <text x="16" y="56" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="13" font-weight="700" fill="#000000">本周总结</text>
+    <rect x="16" y="70" width="68" height="18" rx="4" fill="#FFF0E5" stroke="#FF6A00" stroke-width="0.9"/>
+    <text x="50" y="83" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="10" font-weight="700" fill="#FF6A00">重要事项</text>
+    <line x1="16" y1="106" x2="88" y2="106" stroke="#6281E0" stroke-width="1.6" stroke-linecap="round"/>
+    <line x1="16" y1="129" x2="88" y2="129" stroke="#6281E0" stroke-width="1.6" stroke-linecap="round" opacity="0.55"/>
+    <line x1="16" y1="152" x2="88" y2="152" stroke="#6281E0" stroke-width="1.6" stroke-linecap="round" opacity="0.35"/>
+  </g>
+
+  <g transform="translate(658 206)">
+    <rect x="0" y="0" width="104" height="172" rx="10" fill="url(#cardGrad)" stroke="#0033CC" stroke-width="1.1" filter="url(#cardShadow)"/>
+    <path d="M0,10 Q0,0 10,0 L94,0 Q104,0 104,10 L104,30 L0,30 Z" fill="#E8EEFF"/>
+    <text x="52" y="21" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="12" font-weight="700" fill="#0033CC">第 2 次</text>
+    <text x="16" y="56" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="13" font-weight="700" fill="#000000">本周总结</text>
+    <rect x="16" y="70" width="68" height="18" rx="4" fill="#FFF0E5" stroke="#FF6A00" stroke-width="0.9"/>
+    <text x="50" y="83" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="10" font-weight="700" fill="#FF6A00">重要事项</text>
+    <line x1="16" y1="106" x2="88" y2="106" stroke="#6281E0" stroke-width="1.6" stroke-linecap="round"/>
+    <line x1="16" y1="129" x2="88" y2="129" stroke="#6281E0" stroke-width="1.6" stroke-linecap="round" opacity="0.55"/>
+    <line x1="16" y1="152" x2="88" y2="152" stroke="#6281E0" stroke-width="1.6" stroke-linecap="round" opacity="0.35"/>
+  </g>
+
+  <g transform="translate(778 206)">
+    <rect x="0" y="0" width="104" height="172" rx="10" fill="url(#cardGrad)" stroke="#0033CC" stroke-width="1.1" filter="url(#cardShadow)"/>
+    <path d="M0,10 Q0,0 10,0 L94,0 Q104,0 104,10 L104,30 L0,30 Z" fill="#E8EEFF"/>
+    <text x="52" y="21" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="12" font-weight="700" fill="#0033CC">第 3 次</text>
+    <text x="16" y="56" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="13" font-weight="700" fill="#000000">本周总结</text>
+    <rect x="16" y="70" width="68" height="18" rx="4" fill="#FFF0E5" stroke="#FF6A00" stroke-width="0.9"/>
+    <text x="50" y="83" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="10" font-weight="700" fill="#FF6A00">重要事项</text>
+    <line x1="16" y1="106" x2="88" y2="106" stroke="#6281E0" stroke-width="1.6" stroke-linecap="round"/>
+    <line x1="16" y1="129" x2="88" y2="129" stroke="#6281E0" stroke-width="1.6" stroke-linecap="round" opacity="0.55"/>
+    <line x1="16" y1="152" x2="88" y2="152" stroke="#6281E0" stroke-width="1.6" stroke-linecap="round" opacity="0.35"/>
+  </g>
+
+  <rect x="548" y="418" width="324" height="52" rx="8" fill="#E8EEFF" stroke="#0033CC" stroke-width="1"/>
+  <text x="710" y="440" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="14" font-weight="700" fill="#0033CC">三次写周报，格式保持一致</text>
+  <text x="710" y="461" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="12" fill="#5E5E5E">重要事项始终放在周报开头</text>
+</svg>

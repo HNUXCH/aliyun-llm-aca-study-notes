@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="40 88 880 388" preserveAspectRatio="xMidYMid meet" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma">
+  <defs>
+    <linearGradient id="blueGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0033CC"/>
+      <stop offset="1" stop-color="#6281E0"/>
+    </linearGradient>
+    <filter id="softShadow" x="-10%" y="-14%" width="120%" height="132%">
+      <feDropShadow dx="0" dy="14" stdDeviation="20" flood-color="#0033CC" flood-opacity="0.07"/>
+    </filter>
+    <filter id="nodeShadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#0033CC" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <rect width="960" height="540" rx="8" fill="#FFFFFF"/>
+
+  <g filter="url(#softShadow)">
+    <rect x="70" y="112" width="348" height="340" rx="10" fill="#FFFFFF" stroke="#D8E2FF" stroke-width="1.2"/>
+  </g>
+  <text x="100" y="146" font-size="14" font-weight="700" fill="#000000">Skill 文件夹</text>
+  <text x="100" y="168" font-size="11" font-weight="400" fill="#5E5E5E">一个 Skill 放在一个文件夹里，核心方法写在 SKILL.md 中</text>
+
+  <g transform="translate(100 190)">
+    <path d="M0 10Q0 5 5 5H22L30 14H48Q53 14 53 19V38Q53 43 48 43H5Q0 43 0 38Z" fill="#E8EEFF" stroke="#BFD0FF" stroke-width="1.2"/>
+    <path d="M11 29H42" stroke="#0033CC" stroke-width="1.6" stroke-linecap="round"/>
+    <text x="68" y="25" font-size="13" font-weight="700" fill="#000000">weekly-report-draft/</text>
+  </g>
+
+  <path d="M126 236V424" stroke="#BFD0FF" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M126 282H152M126 348H152M126 386H152M126 424H152" stroke="#BFD0FF" stroke-width="1.5" stroke-linecap="round"/>
+
+  <g transform="translate(152 244)">
+    <rect x="0" y="0" width="210" height="76" rx="8" fill="#FFFFFF" stroke="#0033CC" stroke-width="1.2"/>
+    <path d="M16 10H28L36 18V34H16Z" fill="#FFFFFF" stroke="#0033CC" stroke-width="1.1" stroke-linejoin="round"/>
+    <path d="M28 10V18H36" fill="none" stroke="#0033CC" stroke-width="1"/>
+    <text x="48" y="22" font-size="13" font-weight="700" fill="#0033CC">SKILL.md</text>
+    <text x="48" y="40" font-size="9.5" font-weight="700" fill="#D95A00">name：</text>
+    <text x="84" y="40" font-size="9.5" font-weight="400" fill="#5E5E5E">Skill 名称</text>
+    <text x="48" y="53" font-size="9.5" font-weight="700" fill="#D95A00">description：</text>
+    <text x="118" y="53" font-size="9.5" font-weight="400" fill="#5E5E5E">触发条件</text>
+    <text x="48" y="66" font-size="9.5" font-weight="700" fill="#0033CC">Skill 正文：</text>
+    <text x="116" y="66" font-size="9.5" font-weight="400" fill="#5E5E5E">完整做法</text>
+  </g>
+
+  <g transform="translate(152 328)">
+    <path d="M0 10Q0 6 4 6H17L23 13H40Q44 13 44 17V28Q44 32 40 32H4Q0 32 0 28Z" fill="#E8EEFF" stroke="#BFD0FF" stroke-width="1"/>
+    <text x="58" y="24" font-size="12" font-weight="700" fill="#0033CC">references/</text>
+    <text x="144" y="24" font-size="11" font-weight="400" fill="#5E5E5E">模板、术语、案例</text>
+  </g>
+
+  <g transform="translate(152 366)">
+    <path d="M0 10Q0 6 4 6H17L23 13H40Q44 13 44 17V28Q44 32 40 32H4Q0 32 0 28Z" fill="#E8EEFF" stroke="#BFD0FF" stroke-width="1"/>
+    <text x="58" y="24" font-size="12" font-weight="700" fill="#0033CC">scripts/</text>
+    <text x="120" y="24" font-size="11" font-weight="400" fill="#5E5E5E">检查脚本、自动化</text>
+  </g>
+
+  <g transform="translate(152 404)">
+    <path d="M0 10Q0 6 4 6H17L23 13H40Q44 13 44 17V28Q44 32 40 32H4Q0 32 0 28Z" fill="#E8EEFF" stroke="#BFD0FF" stroke-width="1"/>
+    <text x="58" y="24" font-size="12" font-weight="700" fill="#0033CC">assets/</text>
+    <text x="112" y="24" font-size="11" font-weight="400" fill="#5E5E5E">图片、示例输出</text>
+  </g>
+
+  <path d="M362 270H430" stroke="#FF6A00" stroke-width="1.6" stroke-linecap="round"/>
+  <polygon points="430,270 420,264 420,276" fill="#FF6A00"/>
+  <rect x="365" y="251" width="56" height="38" rx="6" fill="#FFF7F0" stroke="#FFD0AA" stroke-width="1"/>
+  <text x="393" y="266" text-anchor="middle" font-size="10" font-weight="700" fill="#D95A00">交给Agent</text>
+  <text x="393" y="280" text-anchor="middle" font-size="10" font-weight="700" fill="#D95A00">判断</text>
+
+  <g filter="url(#softShadow)">
+    <rect x="430" y="178" width="100" height="180" rx="10" fill="#FFFFFF" stroke="#D8E2FF" stroke-width="1.2"/>
+  </g>
+  <circle cx="480" cy="242" r="30" fill="url(#blueGrad)" filter="url(#nodeShadow)"/>
+  <path d="M466 242H494M480 228V256M490 232L470 253" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round"/>
+  <text x="480" y="302" text-anchor="middle" font-size="14" font-weight="700" fill="#000000">Agent</text>
+  <text x="480" y="324" text-anchor="middle" font-size="12" font-weight="400" fill="#5E5E5E">判断要不要用</text>
+
+  <path d="M530 270H584" stroke="#0033CC" stroke-width="1.6" stroke-linecap="round"/>
+  <polygon points="584,270 574,264 574,276" fill="#0033CC"/>
+  <rect x="535" y="251" width="34" height="38" rx="6" fill="#E8EEFF" stroke="#BFD0FF" stroke-width="1"/>
+  <text x="552" y="266" text-anchor="middle" font-size="10" font-weight="700" fill="#0033CC">确定</text>
+  <text x="552" y="280" text-anchor="middle" font-size="10" font-weight="700" fill="#0033CC">使用</text>
+
+  <g filter="url(#softShadow)">
+    <rect x="584" y="112" width="306" height="340" rx="10" fill="#FFFFFF" stroke="#D8E2FF" stroke-width="1.2"/>
+  </g>
+  <text x="614" y="146" font-size="15" font-weight="700" fill="#000000">渐进式披露</text>
+  <text x="614" y="168" font-size="12" font-weight="400" fill="#5E5E5E">不是一次塞入全部内容，而是逐步打开</text>
+
+  <g transform="translate(614 208)">
+    <rect x="0" y="0" width="246" height="48" rx="8" fill="#0033CC"/>
+    <text x="18" y="21" font-size="13" font-weight="700" fill="#FFFFFF">1. 先看 name 和 description</text>
+    <text x="18" y="38" font-size="12" font-weight="400" fill="#E8EEFF">判断是否需要这个 Skill</text>
+    <path d="M198 25H226" stroke="#00C5FF" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <path d="M737 262V288" stroke="#BFD0FF" stroke-width="1.5" stroke-linecap="round"/>
+  <polygon points="737,288 731,278 743,278" fill="#BFD0FF"/>
+
+  <g transform="translate(614 300)">
+    <rect x="0" y="0" width="246" height="48" rx="8" fill="#FFFFFF" stroke="#BFD0FF" stroke-width="1.2"/>
+    <text x="18" y="21" font-size="13" font-weight="700" fill="#000000">2. 再看执行步骤</text>
+    <text x="18" y="38" font-size="12" font-weight="400" fill="#5E5E5E">步骤、边界和处理规则</text>
+    <path d="M198 16H226M198 25H218M198 34H228" stroke="#BFD0FF" stroke-width="1.2" stroke-linecap="round"/>
+  </g>
+
+  <path d="M737 354V382" stroke="#BFD0FF" stroke-width="1.5" stroke-linecap="round"/>
+  <polygon points="737,382 731,372 743,372" fill="#BFD0FF"/>
+
+  <g transform="translate(614 396)">
+    <rect x="0" y="0" width="246" height="36" rx="8" fill="#FFF7F0" stroke="#FFD0AA" stroke-width="1.2"/>
+    <text x="18" y="23" font-size="13" font-weight="700" fill="#D95A00">3. 需要时再看资料和脚本</text>
+  </g>
+
+</svg>

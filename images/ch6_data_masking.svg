@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="40 50 880 465">
+  <!-- 设计意图：用三段式数据流表达“脱敏不是打码，而是按任务需要减少暴露”。 -->
+  <!-- 风格：苹果风白底、阿里云浅蓝、The Verge 式强调色条、轻科技玻璃面板。 -->
+  <defs>
+    <linearGradient id="blueGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0033CC"/>
+      <stop offset="100%" stop-color="#6281E0"/>
+    </linearGradient>
+    <linearGradient id="safeGreenGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#00E692"/>
+      <stop offset="100%" stop-color="#12A86B"/>
+    </linearGradient>
+    <linearGradient id="softPanel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F6F8FF"/>
+    </linearGradient>
+    <linearGradient id="riskGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FFF3EA"/>
+      <stop offset="100%" stop-color="#FFFFFF"/>
+    </linearGradient>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#0033CC" flood-opacity="0.10"/>
+    </filter>
+    <filter id="orangeShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#FF6A00" flood-opacity="0.14"/>
+    </filter>
+  </defs>
+
+  <rect width="960" height="540" rx="8" fill="#FFFFFF"/>
+
+  <g>
+    <rect x="64" y="74" width="266" height="338" rx="18" fill="url(#softPanel)" stroke="#D8E1FF" stroke-width="1.5" filter="url(#softShadow)"/>
+    <rect x="64" y="74" width="266" height="46" rx="18" fill="#E8EEFF"/>
+    <rect x="64" y="101" width="266" height="19" fill="#E8EEFF"/>
+    <text x="88" y="103" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="15" font-weight="700" fill="#0033CC">原始客户表</text>
+    <text x="210" y="103" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="11" fill="#5E5E5E">信息混在一起</text>
+
+    <rect x="84" y="146" width="226" height="32" rx="8" fill="url(#riskGrad)" stroke="#FF6A00" stroke-width="1.2"/>
+    <text x="98" y="167" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="12" font-weight="700" fill="#000000">姓名</text>
+    <text x="206" y="167" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="12" fill="#FF6A00">张三</text>
+
+    <rect x="84" y="188" width="226" height="32" rx="8" fill="url(#riskGrad)" stroke="#FF6A00" stroke-width="1.2"/>
+    <text x="98" y="209" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="12" font-weight="700" fill="#000000">手机号</text>
+    <text x="206" y="209" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="12" fill="#FF6A00">13812345678</text>
+
+    <rect x="84" y="230" width="226" height="32" rx="8" fill="url(#riskGrad)" stroke="#FF6A00" stroke-width="1.2"/>
+    <text x="98" y="251" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="12" font-weight="700" fill="#000000">身份证号</text>
+    <text x="206" y="251" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="12" fill="#FF6A00">330106...</text>
+
+    <rect x="84" y="272" width="226" height="32" rx="8" fill="#FFFFFF" stroke="#D8E1FF" stroke-width="1.1"/>
+    <text x="98" y="293" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="12" font-weight="700" fill="#000000">行业 / 地区</text>
+    <text x="206" y="293" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="12" fill="#5E5E5E">零售 / 西湖区</text>
+
+    <rect x="84" y="314" width="226" height="32" rx="8" fill="#FFFFFF" stroke="#D8E1FF" stroke-width="1.1"/>
+    <text x="98" y="335" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="12" font-weight="700" fill="#000000">年龄 / 金额</text>
+    <text x="206" y="335" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="12" fill="#5E5E5E">37岁 / 985432元</text>
+
+    <rect x="84" y="356" width="226" height="32" rx="8" fill="url(#riskGrad)" stroke="#FF6A00" stroke-width="1.2"/>
+    <text x="98" y="377" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="12" font-weight="700" fill="#000000">沟通备注</text>
+    <text x="206" y="377" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="12" fill="#FF6A00">含敏感细节</text>
+  </g>
+
+  <path d="M340 252H380" stroke="#0033CC" stroke-width="2" stroke-linecap="round" stroke-dasharray="7,5" opacity="0.62">
+    <animate attributeName="stroke-dashoffset" values="0;-24" dur="1.1s" repeatCount="indefinite"/>
+  </path>
+  <polygon points="380,252 370,246 370,258" fill="#0033CC" opacity="0.72"/>
+
+  <g filter="url(#orangeShadow)">
+    <path d="M372 102H598L562 166H408Z" fill="#E8EEFF" stroke="#BFD0FF" stroke-width="1.4"/>
+    <path d="M398 176H572L548 238H422Z" fill="#C9D6FF" stroke="#AFC2FF" stroke-width="1.4"/>
+    <path d="M416 248H554L538 310H432Z" fill="#6281E0" stroke="#4E72D7" stroke-width="1.4"/>
+    <path d="M426 320H544L534 380H436Z" fill="#0033CC" stroke="#0033CC" stroke-width="1.4"/>
+  </g>
+
+  <text x="485" y="132" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="14" font-weight="700" fill="#0033CC">先判断要不要给</text>
+  <text x="485" y="157" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="11" fill="#5E5E5E">AI 不需要的先拿掉</text>
+
+  <text x="485" y="202" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="14" font-weight="700" fill="#0033CC">删除无关敏感列</text>
+  <text x="485" y="226" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="11" fill="#5E5E5E">不发送身份、手机号等</text>
+
+  <text x="485" y="274" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="13" font-weight="700" fill="#FFFFFF">替换真实身份</text>
+  <text x="485" y="298" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="11" fill="#FFFFFF" opacity="0.92">如：客户A</text>
+
+  <text x="485" y="350" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="13" font-weight="700" fill="#FFFFFF">泛化精确信息</text>
+  <text x="485" y="372" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="11" fill="#FFFFFF" opacity="0.92">如：30-40岁</text>
+
+  <path d="M584 252H624" stroke="#0033CC" stroke-width="2" stroke-linecap="round" stroke-dasharray="7,5" opacity="0.62">
+    <animate attributeName="stroke-dashoffset" values="0;-24" dur="1.1s" repeatCount="indefinite"/>
+  </path>
+  <polygon points="624,252 614,246 614,258" fill="#0033CC" opacity="0.72"/>
+
+  <g>
+    <rect x="640" y="92" width="256" height="300" rx="18" fill="#FFFFFF" stroke="#D8E1FF" stroke-width="1.5" filter="url(#softShadow)"/>
+    <rect x="640" y="92" width="256" height="46" rx="18" fill="url(#blueGrad)"/>
+    <rect x="640" y="119" width="256" height="19" fill="#0033CC"/>
+    <text x="664" y="121" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="15" font-weight="700" fill="#FFFFFF">给 AI 的安全副本</text>
+    <text x="798" y="121" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="11" fill="#FFFFFF" opacity="0.78">只保留任务所需</text>
+
+    <rect x="662" y="164" width="212" height="32" rx="8" fill="#F6F8FF" stroke="#D8E1FF" stroke-width="1.1"/>
+    <text x="678" y="185" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="12" font-weight="700" fill="#000000">客户代号</text>
+    <text x="786" y="185" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="12" fill="#0033CC">客户A</text>
+
+    <rect x="662" y="206" width="212" height="32" rx="8" fill="#F6F8FF" stroke="#D8E1FF" stroke-width="1.1"/>
+    <text x="678" y="227" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="12" font-weight="700" fill="#000000">行业 / 城市</text>
+    <text x="786" y="227" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="12" fill="#0033CC">零售 / 杭州市</text>
+
+    <rect x="662" y="248" width="212" height="32" rx="8" fill="#F6F8FF" stroke="#D8E1FF" stroke-width="1.1"/>
+    <text x="678" y="269" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="12" font-weight="700" fill="#000000">年龄段</text>
+    <text x="786" y="269" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="12" fill="#0033CC">30-40岁</text>
+
+    <rect x="662" y="290" width="212" height="32" rx="8" fill="#F6F8FF" stroke="#D8E1FF" stroke-width="1.1"/>
+    <text x="678" y="311" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="12" font-weight="700" fill="#000000">金额段</text>
+    <text x="786" y="311" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="12" fill="#0033CC">50万-100万元</text>
+
+    <rect x="662" y="332" width="212" height="32" rx="8" fill="#F6F8FF" stroke="#D8E1FF" stroke-width="1.1"/>
+    <text x="678" y="353" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="12" font-weight="700" fill="#000000">购买记录</text>
+    <text x="786" y="353" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="12" fill="#0033CC">A 产品</text>
+  </g>
+
+  <g>
+    <circle cx="768" cy="438" r="36" fill="#E8EEFF" stroke="#BFD0FF" stroke-width="1.4"/>
+    <path d="M768 416L785 423V437C785 449 778 457 768 462C758 457 751 449 751 437V423Z" fill="url(#safeGreenGrad)">
+      <animate attributeName="opacity" values="0.86;1;0.86" dur="2.6s" repeatCount="indefinite"/>
+    </path>
+    <path d="M759 438L765 444L778 430" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <text x="768" y="492" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="13" font-weight="700" fill="#0033CC">AI 只接收安全副本</text>
+  </g>
+
+  <rect x="275" y="444" width="410" height="36" rx="10" fill="#0033CC"/>
+  <text x="480" y="467" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="14" font-weight="700" fill="#FFFFFF">只提供计算必须的信息，不发送敏感信息</text>
+</svg>

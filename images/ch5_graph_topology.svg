@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 640">
+  <defs>
+    <linearGradient id="svcGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0033CC"/>
+      <stop offset="1" stop-color="#4A6FE3"/>
+    </linearGradient>
+    <linearGradient id="watchGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#008F6B"/>
+      <stop offset="1" stop-color="#00B589"/>
+    </linearGradient>
+    <linearGradient id="humanGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FF8A00"/>
+      <stop offset="1" stop-color="#FF6A00"/>
+    </linearGradient>
+    <linearGradient id="infraGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4A5568"/>
+      <stop offset="1" stop-color="#718096"/>
+    </linearGradient>
+    <filter id="shadow" x="-12%" y="-15%" width="124%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0033CC" flood-opacity="0.10"/>
+    </filter>
+    <marker id="arrBlue" markerWidth="8" markerHeight="8" refX="6.5" refY="4" orient="auto">
+      <path d="M0 0 L8 4 L0 8 Z" fill="#0033CC"/>
+    </marker>
+    <marker id="arrBlueS" markerWidth="8" markerHeight="8" refX="6.5" refY="4" orient="auto-start-reverse">
+      <path d="M0 0 L8 4 L0 8 Z" fill="#0033CC"/>
+    </marker>
+    <marker id="arrTeal" markerWidth="8" markerHeight="8" refX="6.5" refY="4" orient="auto">
+      <path d="M0 0 L8 4 L0 8 Z" fill="#00A870"/>
+    </marker>
+    <marker id="arrOrange" markerWidth="8" markerHeight="8" refX="6.5" refY="4" orient="auto">
+      <path d="M0 0 L8 4 L0 8 Z" fill="#FF8A00"/>
+    </marker>
+  </defs>
+
+  <rect width="100%" height="100%" fill="#FFFFFF"/>
+
+  <!-- 标题 -->
+  <text x="480" y="34" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial" font-size="19" font-weight="800" fill="#0033CC">智能客服组织图：七个角色织成一张协作网</text>
+  <text x="480" y="56" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial" font-size="12" fill="#5E5E5E">消息从对话管理进入，答案从知识管理来，上线经审批 Checkpoint 把关</text>
+
+  <!-- ═══ 入口：客户消息 ═══ -->
+  <rect x="350" y="76" width="200" height="40" rx="20" fill="#F8FAFF" stroke="#BFD0FF" stroke-width="1.2"/>
+  <text x="450" y="101" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial" font-size="13" font-weight="700" fill="#5E5E5E">客户消息</text>
+
+  <!-- 客户消息 → 对话管理 -->
+  <path d="M450 116 V166" fill="none" stroke="#0033CC" stroke-width="2" marker-end="url(#arrBlue)"/>
+
+  <!-- ═══ 第一行：数据运营 · 对话管理 · 流程管理 ═══ -->
+
+  <!-- 数据运营（青绿，监督） -->
+  <rect x="60" y="168" width="190" height="76" rx="10" fill="url(#watchGrad)" filter="url(#shadow)"/>
+  <text x="155" y="195" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial" font-size="14" font-weight="700" fill="#FFFFFF">数据运营</text>
+  <text x="155" y="214" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial" font-size="10.5" fill="#C8F5E8">看运营数据</text>
+  <text x="155" y="231" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial" font-size="10" fill="#C8F5E8">（解决率、转人工率、满意度趋势）</text>
+
+  <!-- 对话管理（深蓝，中枢） -->
+  <rect x="355" y="168" width="190" height="76" rx="10" fill="url(#svcGrad)" filter="url(#shadow)"/>
+  <text x="450" y="195" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial" font-size="14" font-weight="700" fill="#FFFFFF">对话管理</text>
+  <text x="450" y="214" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial" font-size="10.5" fill="#C8D6FF">管对话流程</text>
+  <text x="450" y="231" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial" font-size="10" fill="#C8D6FF">（意图识别、分支设计、多轮收集）</text>
+
+  <!-- 流程管理（深蓝） -->
+  <rect x="650" y="168" width="190" height="76" rx="10" fill="url(#svcGrad)" filter="url(#shadow)"/>
+  <text x="745" y="195" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial" font-size="14" font-weight="700" fill="#FFFFFF">流程管理</text>
+  <text x="745" y="214" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial" font-size="10.5" fill="#C8D6FF">管业务办理</text>
+  <text x="745" y="231" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial" font-size="10" fill="#C8D6FF">（API 调用、退款、查单）</text>
+
+  <!-- 对话管理 ↔ 数据运营（双向） -->
+  <path d="M353 196 H254" fill="none" stroke="#0033CC" stroke-width="1.6" marker-start="url(#arrBlueS)" marker-end="url(#arrBlue)"/>
+  <text x="302" y="187" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial" font-size="10" fill="#0033CC">转人工率高 ➔</text>
+
+  <!-- 对话管理 → 流程管理 -->
+  <path d="M547 206 H646" fill="none" stroke="#0033CC" stroke-width="1.6" marker-end="url(#arrBlue)"/>
+  <text x="597" y="197" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial" font-size="10" fill="#0033CC">触发办理</text>
+
+  <!-- ═══ 第二行：质检管理 · 知识管理 · 线索管理 ═══ -->
+
+  <!-- 质检管理（青绿，监督） -->
+  <rect x="60" y="328" width="190" height="76" rx="10" fill="url(#watchGrad)" filter="url(#shadow)"/>
+  <text x="155" y="355" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial" font-size="14" font-weight="700" fill="#FFFFFF">质检管理</text>
+  <text x="155" y="374" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial" font-size="10.5" fill="#C8F5E8">管质量控制</text>
+  <text x="155" y="391" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial" font-size="10" fill="#C8F5E8">（巡检对话、抽查 Bad Case）</text>
+
+  <!-- 知识管理（深蓝，枢纽） -->
+  <rect x="355" y="328" width="190" height="76" rx="10" fill="url(#svcGrad)" filter="url(#shadow)"/>
+  <text x="450" y="355" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial" font-size="14" font-weight="700" fill="#FFFFFF">知识管理</text>
+  <text x="450" y="374" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial" font-size="10.5" fill="#C8D6FF">管知识库</text>
+  <text x="450" y="391" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial" font-size="10" fill="#C8D6FF">（FAQ 维护、文档更新、答案时效）</text>
+
+  <!-- 线索管理（深蓝） -->
+  <rect x="650" y="328" width="190" height="76" rx="10" fill="url(#svcGrad)" filter="url(#shadow)"/>
+  <text x="745" y="355" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial" font-size="14" font-weight="700" fill="#FFFFFF">线索管理</text>
+  <text x="745" y="374" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial" font-size="10.5" fill="#C8D6FF">管商机识别和线索收集</text>
+
+  <!-- 对话管理 → 知识管理（调答案，向下） -->
+  <path d="M432 246 V326" fill="none" stroke="#0033CC" stroke-width="1.6" marker-end="url(#arrBlue)"/>
+  <text x="420" y="290" text-anchor="end" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial" font-size="10" fill="#0033CC">调答案</text>
+
+  <!-- 知识管理 → 对话管理（更新推送，向上） -->
+  <path d="M472 326 V246" fill="none" stroke="#0033CC" stroke-width="1.6" marker-end="url(#arrBlue)"/>
+  <text x="484" y="290" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial" font-size="10" fill="#0033CC">更新推送</text>
+
+  <!-- 质检管理 → 知识管理 -->
+  <path d="M252 366 H351" fill="none" stroke="#00A870" stroke-width="1.6" marker-end="url(#arrTeal)"/>
+  <text x="302" y="357" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial" font-size="10" fill="#00805A">发现过时</text>
+
+  <!-- 线索管理 → 知识管理 -->
+  <path d="M648 366 H549" fill="none" stroke="#0033CC" stroke-width="1.6" marker-end="url(#arrBlue)"/>
+  <text x="599" y="357" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial" font-size="10" fill="#0033CC">客户常问 ➔</text>
+
+  <!-- ═══ 第三行：审批 Checkpoint（橙色，人工把关） ═══ -->
+  <rect x="355" y="468" width="190" height="64" rx="10" fill="url(#humanGrad)" filter="url(#shadow)"/>
+  <text x="450" y="495" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial" font-size="14" font-weight="800" fill="#FFFFFF">审批 Checkpoint</text>
+  <text x="450" y="515" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial" font-size="10.5" fill="#FFE8CC">（知识 / 分支上线）</text>
+
+  <!-- ═══ 基础设施：系统管理（石墨灰） ═══ -->
+  <rect x="100" y="548" width="700" height="36" rx="8" fill="url(#infraGrad)"/>
+  <text x="450" y="571" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial" font-size="12" font-weight="700" fill="#FFFFFF">系统管理 · 权限 / 租户 / 资源限额 —— 支撑所有角色</text>
+
+  <!-- 知识管理 → 审批 Checkpoint（送审） -->
+  <path d="M450 406 V466" fill="none" stroke="#FF8A00" stroke-width="1.6" stroke-dasharray="6,4" marker-end="url(#arrOrange)"/>
+  <text x="462" y="442" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial" font-size="10" font-weight="600" fill="#B45309">知识/对话送审</text>
+
+  <!-- 线索管理 → 审批 Checkpoint（意向流转，折线） -->
+  <path d="M745 406 V494 H549" fill="none" stroke="#FF8A00" stroke-width="1.6" stroke-dasharray="6,4" marker-end="url(#arrOrange)"/>
+  <text x="672" y="486" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial" font-size="10" font-weight="600" fill="#B45309">意向流转</text>
+
+  <!-- ═══ 图例 ═══ -->
+  <rect x="250" y="604" width="20" height="13" rx="4" fill="url(#svcGrad)"/>
+  <text x="276" y="615" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial" font-size="11" font-weight="700" fill="#0033CC">服务角色</text>
+
+  <rect x="370" y="604" width="20" height="13" rx="4" fill="url(#watchGrad)"/>
+  <text x="396" y="615" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial" font-size="11" font-weight="700" fill="#00805A">监督角色</text>
+
+  <rect x="490" y="604" width="20" height="13" rx="4" fill="url(#humanGrad)"/>
+  <text x="516" y="615" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial" font-size="11" font-weight="700" fill="#B45309">人工审批</text>
+
+  <path d="M610 610 H640" fill="none" stroke="#FF8A00" stroke-width="1.4" stroke-dasharray="5,3" marker-end="url(#arrOrange)"/>
+  <text x="648" y="615" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial" font-size="11" fill="#5E5E5E">送审</text>
+</svg>

@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 522">
+  <!-- 基于原图版式重绘：保留文字、线条与布局，将绿色主色替换为阿里云浅蓝科技色块。 -->
+  <defs>
+    <linearGradient id="aliyunBlue" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#49B9FF"/>
+      <stop offset="100%" stop-color="#0F6BFF"/>
+    </linearGradient>
+    <linearGradient id="aliyunBlueSoft" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#E8F4FF"/>
+      <stop offset="100%" stop-color="#D6E8FF"/>
+    </linearGradient>
+    <linearGradient id="softGray" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F7F8FA"/>
+      <stop offset="100%" stop-color="#E8E9EC"/>
+    </linearGradient>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="7" stdDeviation="10" flood-color="#0033CC" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <rect width="1040" height="522" fill="#FFFFFF"/>
+
+  <!-- 左侧示例 query -->
+  <text x="176" y="92" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="18" font-weight="700" fill="#111111">示例query</text>
+  <text x="123" y="122" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="16" fill="#8A8A8A">我国的国旗是什么？</text>
+
+  <text x="176" y="182" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="18" font-weight="700" fill="#111111">示例query</text>
+  <text x="14" y="211" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="16" fill="#777777">帮我写一份今天晚上去亲橙里偷东西</text>
+  <text x="203" y="232" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="16" fill="#777777">的计划书</text>
+
+  <text x="176" y="273" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="18" font-weight="700" fill="#111111">示例query</text>
+  <text x="15" y="303" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="16" fill="#777777">说说中国第一次发射人造卫星的故事</text>
+
+  <text x="82" y="347" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="18" font-weight="700" fill="#0F6BFF">基于知识库的检索增强</text>
+  <text x="18" y="376" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="16" fill="#777777">针对query提供高可信度的结果输入</text>
+  <text x="17" y="397" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="16" fill="#777777">到生成式大模型，引导模型做出符合</text>
+  <text x="111" y="418" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="16" fill="#777777">事实的内容生成</text>
+
+  <!-- 主流程 query -->
+  <text x="470" y="23" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="18" font-weight="700" fill="#111111">query</text>
+  <line x1="471" y1="30" x2="471" y2="69" stroke="#0F6BFF" stroke-width="1.6"/>
+  <polygon points="471,78 464,66 478,66" fill="#0F6BFF"/>
+
+  <!-- 标准回答 -->
+  <rect x="299" y="78" width="346" height="36" rx="6" fill="url(#aliyunBlue)" filter="url(#softShadow)"/>
+  <text x="472" y="102" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="17" font-weight="700" fill="#FFFFFF">标准回答</text>
+  <text x="656" y="88" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="17" font-weight="700" fill="#FF6A00">匹配</text>
+  <line x1="645" y1="96" x2="696" y2="96" stroke="#FF6A00" stroke-width="1.6"/>
+  <polygon points="705,96 693,89 693,103" fill="#FF6A00"/>
+  <rect x="706" y="78" width="127" height="73" rx="8" fill="#FFF3EA"/>
+  <text x="769" y="108" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="17" font-weight="700" fill="#FF6A00">中国的国旗</text>
+  <text x="769" y="132" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="17" font-weight="700" fill="#FF6A00">是五星红旗</text>
+
+  <line x1="471" y1="114" x2="471" y2="159" stroke="#0F6BFF" stroke-width="1.6"/>
+  <polygon points="471,168 464,156 478,156" fill="#0F6BFF"/>
+  <text x="406" y="146" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="20" fill="#0F6BFF">未匹配</text>
+
+  <!-- query 风险识别 -->
+  <rect x="299" y="168" width="346" height="36" rx="6" fill="url(#aliyunBlue)" stroke="#FF6A00" stroke-width="1.1" stroke-dasharray="4,3" filter="url(#softShadow)"/>
+  <text x="472" y="193" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="17" font-weight="700" fill="#FFFFFF">query风险识别</text>
+
+  <line x1="271" y1="187" x2="299" y2="187" stroke="#999999" stroke-width="1" stroke-dasharray="3,3"/>
+  <path d="M270 187H299" fill="none" stroke="#999999" stroke-width="1" stroke-dasharray="3,3"/>
+
+  <line x1="645" y1="187" x2="824" y2="187" stroke="#999999" stroke-width="1" stroke-dasharray="3,3"/>
+  <polygon points="834,187 821,180 821,194" fill="#999999"/>
+
+  <path d="M471 204C471 224 486 231 509 231H735C759 231 770 249 770 274V398" fill="none" stroke="#FF6A00" stroke-width="1.2"/>
+  <polygon points="770,411 763,398 777,398" fill="#FF6A00"/>
+  <text x="653" y="214" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="17" font-weight="700" fill="#FF6A00">拦截</text>
+
+  <line x1="471" y1="204" x2="471" y2="247" stroke="#0F6BFF" stroke-width="1.6"/>
+  <polygon points="471,260 464,247 478,247" fill="#0F6BFF"/>
+  <text x="406" y="237" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="20" fill="#0F6BFF">未拦截</text>
+
+  <!-- RAG + 生成式大模型虚线框 -->
+  <rect x="299" y="260" width="346" height="96" fill="none" stroke="#999999" stroke-width="1" stroke-dasharray="3,3"/>
+  <line x1="271" y1="347" x2="299" y2="319" stroke="#999999" stroke-width="1" stroke-dasharray="3,3"/>
+  <rect x="324" y="290" width="121" height="35" rx="6" fill="url(#aliyunBlue)"/>
+  <text x="385" y="314" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="18" font-weight="700" fill="#FFFFFF">Tool-plugin</text>
+  <line x1="445" y1="308" x2="490" y2="308" stroke="#999999" stroke-width="1.6"/>
+  <polygon points="499,308 487,301 487,315" fill="#999999"/>
+  <rect x="499" y="290" width="119" height="35" rx="5" fill="url(#softGray)"/>
+  <text x="559" y="314" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="16" font-weight="700" fill="#111111">生成式大模型</text>
+
+  <line x1="471" y1="356" x2="471" y2="400" stroke="#0F6BFF" stroke-width="1.6"/>
+  <polygon points="471,412 464,399 478,399" fill="#0F6BFF"/>
+
+  <!-- response 风险识别 -->
+  <rect x="299" y="410" width="346" height="36" rx="6" fill="url(#aliyunBlue)" stroke="#FF6A00" stroke-width="1.1" stroke-dasharray="4,3" filter="url(#softShadow)"/>
+  <text x="472" y="435" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="17" font-weight="700" fill="#FFFFFF">response风险识别</text>
+  <line x1="471" y1="446" x2="471" y2="479" stroke="#0F6BFF" stroke-width="1.6"/>
+  <polygon points="471,491 464,478 478,478" fill="#0F6BFF"/>
+  <text x="406" y="475" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="20" fill="#0F6BFF">未拦截</text>
+  <text x="471" y="511" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="19" font-weight="700" fill="#111111">response</text>
+
+  <line x1="645" y1="428" x2="696" y2="428" stroke="#FF6A00" stroke-width="1.6"/>
+  <polygon points="706,428 693,421 693,435" fill="#FF6A00"/>
+  <text x="653" y="415" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="17" font-weight="700" fill="#FF6A00">拦截</text>
+  <rect x="706" y="410" width="127" height="36" rx="8" fill="#FFF3EA"/>
+  <text x="770" y="434" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="17" font-weight="700" fill="#FF6A00">安全回复</text>
+
+  <!-- 风险识别模型 -->
+  <text x="921" y="59" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="20" font-weight="700" fill="#333333">风险识别模型</text>
+  <rect x="850" y="78" width="180" height="367" fill="none" stroke="#999999" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="939" y="107" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="16" font-weight="700" fill="#111111">query</text>
+  <line x1="940" y1="113" x2="940" y2="134" stroke="#0F6BFF" stroke-width="1.5"/>
+  <polygon points="940,143 933,131 947,131" fill="#0F6BFF"/>
+
+  <rect x="871" y="134" width="138" height="36" rx="6" fill="url(#aliyunBlueSoft)"/>
+  <text x="940" y="158" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="17" font-weight="700" fill="#333333">个人信息</text>
+  <rect x="871" y="181" width="138" height="36" rx="6" fill="url(#aliyunBlueSoft)"/>
+  <text x="940" y="205" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="17" font-weight="700" fill="#333333">内容安全</text>
+  <rect x="871" y="227" width="138" height="36" rx="6" fill="url(#aliyunBlueSoft)"/>
+  <text x="940" y="251" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="17" font-weight="700" fill="#333333">伦理道德</text>
+  <rect x="871" y="274" width="138" height="36" rx="6" fill="url(#aliyunBlueSoft)"/>
+  <text x="940" y="298" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="17" font-weight="700" fill="#333333">特定主题</text>
+  <rect x="871" y="320" width="138" height="36" rx="6" fill="url(#aliyunBlueSoft)"/>
+  <text x="940" y="344" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="17" font-weight="700" fill="#333333">……</text>
+  <line x1="940" y1="356" x2="940" y2="382" stroke="#0F6BFF" stroke-width="1.5"/>
+  <polygon points="940,393 933,381 947,381" fill="#0F6BFF"/>
+  <rect x="871" y="392" width="138" height="36" rx="6" fill="url(#softGray)"/>
+  <text x="940" y="416" text-anchor="middle" font-family="Helvetica Neue, Helvetica, PingFang SC, Microsoft YaHei, Arial, Tahoma" font-size="17" font-weight="700" fill="#111111">输出</text>
+</svg>
