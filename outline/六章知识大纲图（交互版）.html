@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>阿里云大模型 ACA 认证 · 六章知识大纲图</title>
+<script src="https://image.uc.cn/s/uae/g/3n/mos-production/0915/echarts.min.js"></script>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+    background: #f5f7fa;
+    color: #333;
+  }
+  .page-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 32px;
+  }
+  .page-header {
+    text-align: center;
+    margin-bottom: 28px;
+  }
+  .page-header h1 {
+    font-size: 22px;
+    color: #2c3e50;
+    margin-bottom: 8px;
+  }
+  .page-header p {
+    font-size: 13px;
+    color: #8a97a8;
+  }
+  .card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    padding: 24px;
+    margin-bottom: 24px;
+  }
+  .chart-container {
+    width: 100%;
+    min-height: 300px;
+  }
+  .table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .table-responsive table {
+    min-width: 480px;
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+  }
+  .table-responsive th,
+  .table-responsive td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #eef1f5;
+    text-align: left;
+  }
+  .table-responsive th {
+    background: #f8fafc;
+    color: #5a6b80;
+    font-weight: 600;
+  }
+  .dot {
+    display: inline-block;
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    margin-right: 6px;
+    vertical-align: middle;
+  }
+  @media (max-width: 768px) {
+    .page-wrapper { padding: 20px 12px; }
+    .card { padding: 12px; margin-bottom: 16px; border-radius: 8px; }
+    .chart-container { min-height: 240px; }
+    .table-responsive table { font-size: 12px; }
+    .table-responsive th,
+    .table-responsive td { padding: 8px 6px; }
+  }
+</style>
+</head>
+<body>
+<div class="page-wrapper">
+  <div class="page-header">
+    <h1>阿里云大模型工程师 ACA 认证 · 六章知识大纲图</h1>
+    <p>依据官方考试大纲与配套课程整理 · ★ 为高频考点 · 满分 100 分 / 及格 80 分 / 单选 35 题 + 多选 15 题 / 60 分钟</p>
+  </div>
+
+  <div class="card">
+    <div class="table-responsive">
+      <table>
+        <tr><th>考核知识点</th><th>试题比例</th><th>对应章节</th><th>核心主线</th></tr>
+        <tr><td><span class="dot" style="background:#5470C6"></span>大模型概念</td><td>18%</td><td>第 1 章</td><td>生成机制与三大边界</td></tr>
+        <tr><td><span class="dot" style="background:#91CC75"></span>提示词工程</td><td>20%</td><td>第 2 章</td><td>好答案来自好输入（三层递进）</td></tr>
+        <tr><td><span class="dot" style="background:#FAC858"></span>增强大模型应用的能力</td><td>22%</td><td>第 3 章</td><td>查资料用 RAG，做动作用工具</td></tr>
+        <tr><td><span class="dot" style="background:#EE6666"></span>大模型微调</td><td>12%</td><td>第 4 章</td><td>稳行为才考虑微调</td></tr>
+        <tr><td><span class="dot" style="background:#73C0DE"></span>大模型 Agent</td><td>16%</td><td>第 5 章</td><td>从回答问题到完成任务</td></tr>
+        <tr><td><span class="dot" style="background:#9A60B4"></span>大模型安全合规</td><td>12%</td><td>第 6 章</td><td>让 AI 在边界内工作</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="card" data-chart="true"><div class="chart-container" id="chart1"></div></div>
+  <div class="card" data-chart="true"><div class="chart-container" id="chart2"></div></div>
+  <div class="card" data-chart="true"><div class="chart-container" id="chart3"></div></div>
+  <div class="card" data-chart="true"><div class="chart-container" id="chart4"></div></div>
+  <div class="card" data-chart="true"><div class="chart-container" id="chart5"></div></div>
+  <div class="card" data-chart="true"><div class="chart-container" id="chart6"></div></div>
+</div>
+
+<script>
+var isMobile = window.innerWidth <= 768;
+
+var CHAPTERS = [
+  {
+    id: 'chart1', title: '第1章 大模型概念', weight: '试题占比 18%', color: '#5470C6',
+    children: [
+      {name: '1.1 什么是大模型', children: [
+        {name: 'AI / 大模型 / Agent 三者关系'},
+        {name: '与传统方法的区别'},
+        {name: '「大」：参数规模、训练数据、适用任务'},
+        {name: '模型、平台、应用三层'}
+      ]},
+      {name: '1.2 生成回答方式 ★', children: [
+        {name: '自回归生成（文字接龙）'},
+        {name: 'Token：文字片段'},
+        {name: '注意力机制'},
+        {name: 'MoE 混合专家'}
+      ]},
+      {name: '1.3 训练三阶段', children: [
+        {name: '预训练：语言与知识'},
+        {name: 'SFT：按指令回答'},
+        {name: '偏好对齐：RLHF / DPO'}
+      ]},
+      {name: '1.4 三大常见边界 ★', children: [
+        {name: '上下文有限'},
+        {name: '知识可能过时'},
+        {name: '回答可能不准确（幻觉）'}
+      ]},
+      {name: '1.5 能力边界判断 ★ 选型口诀'},
+      {name: '1.6 典型应用场景', children: [
+        {name: '应用三个层次'},
+        {name: '千问产品矩阵'}
+      ]},
+      {name: '1.7 常见误区'}
+    ]
+  },
+  {
+    id: 'chart2', title: '第2章 提示词工程', weight: '试题占比 20%', color: '#91CC75',
+    children: [
+      {name: '2.1 提示词是什么'},
+      {name: '2.2 第一层：把任务说清楚 ★', children: [
+        {name: '先跑一次，看答案缺什么'},
+        {name: '四要素：角色+任务+背景资料+输出要求'},
+        {name: '正反样例对齐标准'},
+        {name: '藏起立场防谄媚（谄媚四类型）'}
+      ]},
+      {name: '2.3 第二层：复杂任务协同 ★', children: [
+        {name: '采访模式'},
+        {name: '原始资料先分析'},
+        {name: '出计划并对焦'},
+        {name: '分段执行、逐段确认'},
+        {name: '两步验证：逐段检查+全文通读'}
+      ]},
+      {name: '2.4 第三层：沉淀复用工具 ★', children: [
+        {name: '元提示词'},
+        {name: '验证器（红线/打分/融合）'},
+        {name: '模板+验证器闭环'}
+      ]},
+      {name: '2.5 典型任务补充信息 ★ 翻译/改写/总结/分类'},
+      {name: '2.6 常见误区'}
+    ]
+  },
+  {
+    id: 'chart3', title: '第3章 增强大模型应用的能力', weight: '试题占比 22%', color: '#FAC858',
+    children: [
+      {name: '3.1 为什么增强：三个短板'},
+      {name: '3.2 RAG 基本原理 ★', children: [
+        {name: '两阶段：建立索引、检索生成'},
+        {name: '智能问答系统全景'}
+      ]},
+      {name: '3.3 各环节影响答案质量 ★', children: [
+        {name: '文档解析'},
+        {name: '文档切分（Lost in the Middle）'},
+        {name: '向量化与检索'},
+        {name: '混合检索与重排序（RRF/ReRank）'},
+        {name: '回答前反思与 Agentic RAG'}
+      ]},
+      {name: '3.4 评测体系 ★', children: [
+        {name: '评测集制作'},
+        {name: 'Ragas 评测指标'},
+        {name: '专家+自动评测、GSB 把关'}
+      ]},
+      {name: '3.5 五步归因分析法 ★'},
+      {name: '3.6 工具调用 ★'},
+      {name: '3.7 RAG 与工具的选型 ★'},
+      {name: '3.8 MCP（了解作用即可）'},
+      {name: '3.9 常见误区'}
+    ]
+  },
+  {
+    id: 'chart4', title: '第4章 大模型微调', weight: '试题占比 12%', color: '#EE6666',
+    children: [
+      {name: '4.1 什么是微调（灾难性遗忘）'},
+      {name: '4.2 能实现什么 ★ 风格化/格式化/降本'},
+      {name: '4.3 关键挑战：数据、调参、过拟合/欠拟合'},
+      {name: '4.4 业务决策四要素 ★'},
+      {name: '4.5 基本流程 ★（官方九步）'},
+      {name: '4.6 微调方式 ★', children: [
+        {name: '全参微调'},
+        {name: 'PEFT：LoRA/Adapter/Prefix/Prompt Tuning'}
+      ]},
+      {name: '4.7 选型边界 ★ 提示词→RAG/工具→微调'},
+      {name: '4.8 阿里云产品选择：PAI/GPU/百炼'},
+      {name: '4.9 常见误区'}
+    ]
+  },
+  {
+    id: 'chart5', title: '第5章 大模型 Agent', weight: '试题占比 16%', color: '#73C0DE',
+    children: [
+      {name: '5.1 什么是 Agent：回答问题→完成任务'},
+      {name: '5.2 基本能力与局限'},
+      {name: '5.3 下达任务四要素 ★ 目标/资料/边界/检查点'},
+      {name: '5.4 工具调用与 MCP ★', children: [
+        {name: '工具调用四步流程'},
+        {name: '工具不是越多越好'},
+        {name: '安装 MCP 三条安全做法'},
+        {name: 'Agentic RAG'}
+      ]},
+      {name: '5.5 Skill：固化工作方法 ★', children: [
+        {name: 'description 写法要点'},
+        {name: '组织自查清单'},
+        {name: 'Skill 管方法 / MCP 管能力'}
+      ]},
+      {name: '5.6 自检闭环 ★', children: [
+        {name: '执行规则→过程记录→独立检查→修订沉淀'},
+        {name: '清单三要素：具体、可核对、有证据'},
+        {name: 'Harness 与 Loop'},
+        {name: '图编排（非必要不上图）'}
+      ]},
+      {name: '5.7 场景落地：三问 + RIDE 方法论'},
+      {name: '5.8 常见误区'}
+    ]
+  },
+  {
+    id: 'chart6', title: '第6章 大模型安全合规', weight: '试题占比 12%', color: '#9A60B4',
+    children: [
+      {name: '6.1 核心理念：让 AI 在边界内工作'},
+      {name: '6.2 注入攻击 ★', children: [
+        {name: '外部资料只当纯文本'},
+        {name: '重要任务先出计划'},
+        {name: '高影响操作人工确认'}
+      ]},
+      {name: '6.3 敏感数据 ★', children: [
+        {name: '分级：公开/内部/机密'},
+        {name: '脱敏四法：替换/掩码/泛化/删除'}
+      ]},
+      {name: '6.4 结论核查 ★', children: [
+        {name: '关键数字'},
+        {name: '重要来源'},
+        {name: '专业判断'},
+        {name: '对外内容'}
+      ]},
+      {name: '6.5 发布三道检查 ★ 事实/表达/版权'},
+      {name: '6.6 按权限使用 ★', children: [
+        {name: '最小权限'},
+        {name: '重要操作确认'},
+        {name: '输出核查'},
+        {name: '保留记录（审计）'}
+      ]},
+      {name: '6.7 七大治理要点（多选常考）', children: [
+        {name: '内容安全'},
+        {name: '数据安全'},
+        {name: '权限控制'},
+        {name: '生成内容标识'},
+        {name: '来源留存'},
+        {name: '审计追踪'},
+        {name: '人工复核'}
+      ]},
+      {name: '6.8 高风险场景：责任在人'},
+      {name: '6.9 常见误区'}
+    ]
+  }
+];
+
+function countLeaves(node) {
+  if (!node.children || node.children.length === 0) return 1;
+  var n = 0;
+  for (var i = 0; i < node.children.length; i++) n += countLeaves(node.children[i]);
+  return n;
+}
+
+var charts = [];
+
+CHAPTERS.forEach(function (ch) {
+  var leaves = countLeaves({children: ch.children});
+  var height = Math.max(430, leaves * (isMobile ? 34 : 30) + 130);
+  var dom = document.getElementById(ch.id);
+  dom.style.height = height + 'px';
+  var chart = echarts.init(dom);
+  charts.push(chart);
+
+  var treeData = {
+    name: ch.title.replace(/^第\d章\s*/, ''),
+    itemStyle: { color: ch.color, borderColor: ch.color },
+    label: { position: 'top', align: 'center', verticalAlign: 'bottom', offset: [0, -6], fontSize: isMobile ? 13 : 15, fontWeight: 'bold', color: '#fff', backgroundColor: ch.color, padding: [6, 10], borderRadius: 6 },
+    children: ch.children
+  };
+
+  var option = {
+    title: {
+      text: ch.title + '（' + ch.weight + '）',
+      left: 'center',
+      top: isMobile ? 4 : 8,
+      textStyle: { fontSize: isMobile ? 14 : 17, color: '#2c3e50' }
+    },
+    tooltip: {
+      trigger: 'item',
+      formatter: function (params) {
+        if (params.treeAncestors && params.treeAncestors.length) {
+          var names = [];
+          for (var i = 0; i < params.treeAncestors.length; i++) {
+            if (params.treeAncestors[i] && params.treeAncestors[i].name) names.push(params.treeAncestors[i].name);
+          }
+          return names.join(' → ');
+        }
+        return params.name;
+      }
+    },
+    series: [{
+      type: 'tree',
+      data: [treeData],
+      orient: 'LR',
+      top: 60,
+      bottom: 16,
+      left: isMobile ? '14%' : '12%',
+      right: isMobile ? '44%' : '38%',
+      symbol: 'circle',
+      symbolSize: isMobile ? 7 : 9,
+      initialTreeDepth: -1,
+      roam: false,
+      itemStyle: { color: ch.color, borderColor: ch.color },
+      lineStyle: { color: ch.color, opacity: 0.4, width: 1.5, curveness: 0.5 },
+      label: {
+        position: 'left',
+        verticalAlign: 'middle',
+        align: 'right',
+        fontSize: isMobile ? 11 : 13,
+        color: '#333',
+        offset: [-8, 0]
+      },
+      leaves: {
+        itemStyle: { color: '#fff', borderColor: ch.color, borderWidth: 1.5 },
+        label: {
+          position: 'right',
+          verticalAlign: 'middle',
+          align: 'left',
+          fontSize: isMobile ? 10 : 12,
+          color: '#555',
+          offset: [8, 0]
+        }
+      },
+      emphasis: { focus: 'descendant' },
+      expandAndCollapse: true,
+      animationDuration: 300,
+      animationDurationUpdate: 300
+    }]
+  };
+
+  chart.setOption(option);
+});
+
+window.addEventListener('resize', function () {
+  charts.forEach(function (c) { c.resize(); });
+});
+</script>
+</body>
+</html>
